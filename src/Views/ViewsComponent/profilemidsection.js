@@ -14,7 +14,8 @@ import e from './e.jpg'
 import w from './w.jpg'
 import { orange } from '@mui/material/colors';
 import { hover } from '@testing-library/user-event/dist/hover';
-import ZedgooFooter from './profilefooter';
+ 
+    
 
 
 const WhyWeAreBest = () => {

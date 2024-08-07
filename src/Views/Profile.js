@@ -1,16 +1,16 @@
 import React from 'react';
-import WhyWeAreBest from './profilemidsection';
+import WhyWeAreBest from './ViewsComponent/profilemidsection';
 import { Typography, Button, Stack, List, Box, Grid, ImageList } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import ListItem from '@mui/material/ListItem';
 import { orange } from '@mui/material/colors';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import deskleft from './deskleft.png'
-import deskright from './deskright.png'
-import desk from './desk.png'
-import Footer from './profilefooter';
-import ZedgooFooter from './profilefooter';
+import deskleft from './ViewsComponent/deskleft.png'
+import deskright from './ViewsComponent/deskright.png'
+import desk from './ViewsComponent/desk.png'
+
+
 
 const Profile = () => {
   console.log('Profile renders')

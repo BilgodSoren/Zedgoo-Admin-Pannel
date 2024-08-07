@@ -3,9 +3,9 @@ import { AppBar, Toolbar, Typography, Button, IconButton, Menu, Box } from '@mui
 import '@fontsource/roboto/300.css'; // import the 300 weight of the Roboto font
 import { Notifications } from '@mui/icons-material';
 import { Circle } from '@mui/icons-material';
-import UserSearch from './UserSearch';
+import UserSearch from './ViewsComponent/UserSearch';
 import StudentList from './StudentList';
-import EyeDetails from './EyeDetails';
+
 
 
 const DashboardTopBtns = () => {

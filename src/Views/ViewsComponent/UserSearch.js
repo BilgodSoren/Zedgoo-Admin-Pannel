@@ -6,13 +6,13 @@ import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import Button from '@mui/material/Button';
 import { FormLabel, InputLabel, Typography } from '@mui/material';
-import StudentList from './StudentList';
+import StudentList from '../StudentList';
 import { Search } from '@mui/icons-material';
 import { Label } from '@mui/icons-material';
-import EyeDetails from './EyeDetails';
 
 
-export default function UserSearch() {
+
+const  UserSearch=()=> {
   const [user, setUser] = React.useState('');
   const [session, setSession] = React.useState('');
   const [batch, setBatch] = React.useState('');
@@ -118,9 +118,6 @@ export default function UserSearch() {
             </Button>
           </Box>
 
-
-
-
         </Box>
       </Box>
 
@@ -128,7 +125,7 @@ export default function UserSearch() {
       <Box sx={{ margin: '20px 15px 15px 15px', textAlign: 'center', borderRadius: '10px', height: '68vh',width:'65%', border: '0.4px solid whitesmoke', boxShadow: '0px 0px 1px grey' }}>
 
 
-        <Box sx={{ width: '95%', margin: '10px 5px 0px 14px' }}>
+        <Box sx={{ width: '95%', margin: '10px 5px 0px 14px',overflow:'auto' }}>
               <Typography variant='body1' sx={{marginBottom:'20px',fontWeight:700}} color={'black'} textAlign={'left'}>Student List</Typography>
 
 
@@ -142,3 +139,5 @@ export default function UserSearch() {
     </Box>
   );
 }
+
+export default UserSearch;

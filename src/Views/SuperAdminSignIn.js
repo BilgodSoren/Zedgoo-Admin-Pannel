@@ -1,6 +1,6 @@
 import React from 'react';
 import { Typography, Button, Stack, List, Box, Grid, Link, TextField, Container, colors } from '@mui/material';
-import zedgoo from './zedgoo.png';
+import zedgoo from './ViewsComponent/zedgoo.png';
 
 const SuperAdminSignIn = () => {
   return (
