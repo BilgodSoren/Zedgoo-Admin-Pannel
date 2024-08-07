@@ -5,20 +5,22 @@ import SuperAdminSignIn from './Views/SuperAdminSignIn';
 import SuperAdminSignUp from './Views/SuperAdminSignUp';
 import Dashboard from './Views/Dashboard';
 import DashboardTopBtns from './Views/Dashboard';
+import UserSearch from './Views/UserSearch';
 
 // import Dashboard from './Views/Dashboard';
 
 function App() {
   return (
     <div className="App">
-       {/* <Profile /> 
+      {/* <Profile /> 
        <SuperAdminSignUp /> */}
-      <SuperAdminSignIn/>
-      {/* <DashboardTopBtns/> */}
-    
-    
+       {/* <SuperAdminSignIn/>  */}
+      <Dashboard/>
      
-      
+
+
+
+
     </div>
   );
 }
