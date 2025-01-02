@@ -6,16 +6,21 @@ import Toolbar from '@mui/material/Toolbar';
 import ListItem from '@mui/material/ListItem';
 import { orange } from '@mui/material/colors';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import deskleft from './ViewsComponent/deskleft.png'
-import deskright from './ViewsComponent/deskright.png'
-import desk from './ViewsComponent/desk.png'
+import deskleft from './ViewsComponent/deskleft.png';
+import deskright from './ViewsComponent/deskright.png';
+import desk from './ViewsComponent/desk.png';
+import ZedgooFooter from './ViewsComponent/profilefooter';
+import SuperAdminSignIn from './SuperAdminSignIn';
+import { NavLink } from 'react-router-dom';
+
+
 
 
 
 const Profile = () => {
   console.log('Profile renders')
   return (
-    <Box sx={{ height: 'auto', display: 'flex', flexDirection: 'column' }}>
+    <Box sx={{ height: 'auto', display: 'flex', flexDirection: 'column',zIndex:3 }}>
       {/* Header */}
       <AppBar>
         <Toolbar sx={{ height: '80px', backgroundColor: 'rgba(42, 41, 39, 1)' }}>
@@ -38,9 +43,12 @@ const Profile = () => {
           </Box>
 
           {/* header Button */}
-          <Button variant='outlined' sx={{ marginLeft: 'auto', backgroundColor: 'orange' }} color="inherit">
-            Login/SignUp
-          </Button>
+            <Button  
+            component ={NavLink}
+              to="/Logout"
+            variant='outlined' sx={{ marginLeft: 'auto', backgroundColor: 'orange' }} color="inherit">
+              Login/SignUp
+            </Button>
         </Toolbar>
       </AppBar>
 

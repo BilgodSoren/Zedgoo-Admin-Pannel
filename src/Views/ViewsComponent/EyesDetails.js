@@ -15,10 +15,11 @@ const Item = styled(Grid)(({ theme }) => ({
 
 export default function EyeDetails() {
   return (
-    <Box sx={{color:'black',margin:'10px 10px 10px 10px'}}>
-      <Stack direction="row" spacing={2} alignItems="center"  justifyContent="flex-end">
+    <Box sx={{color:'black',margin:'10px 10px 10px 10px',position: 'absolute', right: '20px', top: '150px', display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '67.5vh', width: '28%',
+      border: '0.4px solid whitesmoke', boxShadow: '0px 0px 1px grey'}}>
+      <Box sx={{position:'relative',left:'380px',top:'5px',cursor:'pointer'}}>
         <EditIcon/>
-      </Stack>
+      </Box>
       <Avatar  alt="Gavin Kumari" src={q} sx={{marginLeft:'38%', width: 100, height: 100,border:'9px solid whitesmoke'}}/>
       <Typography variant="h6" >
         Gavin Kumari
@@ -27,46 +28,43 @@ export default function EyeDetails() {
         Enrolment Number: ABCD#001
       </Typography>
       <Grid container spacing={2} sx={{ mt: 2 }}>
-        <Item xs={12} md={6}>
-          <Typography variant="subtitle1" gutterBottom  >
+        <Item xs={12} md={6} ml={1}>
+          <Typography variant="subtitle1"   >
             Mobile No.
           </Typography>
           <Typography sx={{fontSize:'12.5px',color:'black'}} gutterBottom  >
             +91-9876543210
           </Typography>
-          <Typography variant="subtitle1" gutterBottom  >
+          <Typography variant="subtitle1"  >
             Email ID
           </Typography>
           <Typography sx={{fontSize:'12.5px',color:'black'}} gutterBottom  >
             Emailid@email.com
           </Typography>
-        </Item>
-        <Item xs={12} md={6}>
-        </Item>
-        <Item xs={12} md={6}>
-          <Typography variant="subtitle1" gutterBottom  >
+          <Typography variant="subtitle1"  >
             ORG ID
           </Typography>
           <Typography sx={{fontSize:'12.5px',color:'black'}} gutterBottom  >
             23001
           </Typography>
-          <Typography variant="subtitle1" gutterBottom  >
+          <Typography variant="subtitle1"   >
             Batches Enrolled
           </Typography>
-          <Typography sx={{fontSize:'12.5px',color:'black'}} gutterBottom  >
+          <Typography sx={{fontSize:'12px',color:'black'}} gutterBottom  >
             Batch (Batch ID 1)
           </Typography>
-          <Typography sx={{fontSize:'12.5px',color:'black'}} gutterBottom  >
+          <Typography sx={{fontSize:'12px',color:'black'}} gutterBottom  >
             Batch (Batch ID 1)
           </Typography>
-          <Typography sx={{fontSize:'12.5px',color:'black'}} gutterBottom  >
+          <Typography sx={{fontSize:'12px',color:'black'}} gutterBottom  >
             Batch (Batch ID 1)
           </Typography>
-          <Typography sx={{fontSize:'12.5px',color:'black'}} gutterBottom  >
+          <Typography sx={{fontSize:'12px',color:'black'}} gutterBottom  >
             Batch (Batch ID 1)
           </Typography>
 
         </Item>
+       
         
       </Grid>
     </Box>
