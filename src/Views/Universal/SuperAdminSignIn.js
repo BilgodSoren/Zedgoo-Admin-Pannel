@@ -1,6 +1,6 @@
 import React from 'react';
 import { Typography, Button, Stack, List, Box, Grid, Link, TextField, Container, colors } from '@mui/material';
-import zedgoo from './ViewsComponent/zedgoo.png';
+import zedgoo from './zedgoo.png';
 import SuperAdminSignUp from './SuperAdminSignUp';
 import { NavLink } from 'react-router-dom';
 import Dashboard from './Dashboard';

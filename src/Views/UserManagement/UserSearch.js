@@ -7,11 +7,14 @@ import MenuItem from '@mui/material/MenuItem';
 import Button from '@mui/material/Button';
 import { FormLabel, Typography } from '@mui/material';
 import { Search } from '@mui/icons-material';
+import EmptyDetails from '../UserManagement/UserEmptyDetails';
+import { useState } from 'react';
 
 const UserSearch = () => {
   const [user, setUser] = React.useState('');
   const [session, setSession] = React.useState('');
   const [batch, setBatch] = React.useState('');
+  const [showEmptyDetails, setShowEmptyDetails] = useState(false);
 
   const handleChange = (event) => {
     setUser(event.target.value);
@@ -23,6 +26,10 @@ const UserSearch = () => {
 
   const handleBatchChange = (event) => {
     setBatch(event.target.value);
+  };
+
+  const handleVisibilityToggle = () => {
+    setShowEmptyDetails((prevState) => !prevState); // Show the EmptyDetails component
   };
 
   return (
@@ -101,12 +108,23 @@ const UserSearch = () => {
               variant="outlined"
               size="small"
             />
-            <Button sx={{ height: '40px', backgroundColor: 'black' }} variant="contained">
+            <Button
+              onClick={handleVisibilityToggle}
+              sx={{ height: '40px', backgroundColor: 'black' }}
+              variant="contained"
+            >
               + Add New
             </Button>
           </Box>
         </Box>
       </Box>
+
+      {/* Show EmptyDetails component */}
+      {showEmptyDetails && (
+        <Box>
+          <EmptyDetails />
+        </Box>
+      )}
     </Box>
   );
 };

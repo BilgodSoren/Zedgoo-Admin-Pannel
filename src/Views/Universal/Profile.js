@@ -1,18 +1,18 @@
 import React from 'react';
-import WhyWeAreBest from './ViewsComponent/profilemidsection';
+import WhyWeAreBest from './profilemidsection';
 import { Typography, Button, Stack, List, Box, Grid, ImageList } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import ListItem from '@mui/material/ListItem';
 import { orange } from '@mui/material/colors';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import deskleft from './ViewsComponent/deskleft.png';
-import deskright from './ViewsComponent/deskright.png';
-import desk from './ViewsComponent/desk.png';
-import ZedgooFooter from './ViewsComponent/profilefooter';
+import deskleft from './deskleft.png';
+import deskright from './deskright.png';
+import desk from './desk.png'
+import ZedgooFooter from './profilefooter';
 import SuperAdminSignIn from './SuperAdminSignIn';
 import { NavLink } from 'react-router-dom';
-
+  
 
 
 
@@ -45,7 +45,7 @@ const Profile = () => {
           {/* header Button */}
             <Button  
             component ={NavLink}
-              to="/Logout"
+              to="/SuperAdminSignIn"
             variant='outlined' sx={{ marginLeft: 'auto', backgroundColor: 'orange' }} color="inherit">
               Login/SignUp
             </Button>

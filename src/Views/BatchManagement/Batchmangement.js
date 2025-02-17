@@ -3,18 +3,19 @@ import * as React from 'react';
 import '@fontsource/roboto/300.css'; // import the 300 weight of the Roboto font
 import { Notifications } from '@mui/icons-material';
 import { Circle } from '@mui/icons-material';
-import UserSearch from '../ViewsComponent/UserSearch';
-import StudentList from '../StudentList';
+// import UserSearch from '../ViewsComponent/UserSearch';
+// import StudentList from '../StudentList';
+import BatchStudentList from './BatchStudentList';
 import { Box, Typography, AppBar, Button } from '@mui/material';
 // import IconButton from '@mui/material';
 import { IconButton } from '@mui/material';
-import NothingtoShowFp from '../ViewsComponent/Nothingtoshowfp';
-import EmptyDetails from '../ViewsComponent/EmptyDetails';
+
 import BatchSearch from './BatchSearch';
 import BatchDetails1 from './BatchDetails1';
 import BatchDetails2 from './BatchDetails2';
 import BatchDetails3 from './BatchDetails3';
 import BatchDetails4 from './BatchDetails4';
+import w from './w.jpg'
 
 
 
@@ -53,18 +54,12 @@ const BatchManagement = () => {
 
 
 
-            <StudentList />
+            <BatchStudentList />                   
             <Box sx={{
               position: 'absolute', right: '20px', top: '50px', display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100vh', width: '28%',
               //  boxShadow: '0px 0px 1px grey'
             }}>
-              {/* <BatchDetails1/> */}
-              {/* <BatchDetails2/> */}
-              {/* <BatchDetails3/> */}
-              <BatchDetails4/>
-              {/* <EyeDetails/> */}
-              {/* <EmptyDetails /> */}
-              {/* <NothingtoShowFp /> */}
+              
             </Box>
           </Box>
 

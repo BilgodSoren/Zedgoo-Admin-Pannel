@@ -5,11 +5,10 @@ import {
   Box,
   TextField,
 } from '@mui/material';
-import zedgoo from './ViewsComponent/zedgoo.png';
+import zedgoo from './zedgoo.png';
 import { NavLink } from 'react-router-dom';
-import SuperAdminSignIn from './SuperAdminSignIn';
 
-const ZedgooProfile = () => {
+const SuperAdminSignUp = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     alert('Signup Successful!');
@@ -110,12 +109,12 @@ const ZedgooProfile = () => {
 
             <Button
               component={NavLink}
-              to="/SuperAdminSignIn"
+              to="/ZedgooProfile"
               type="submit"
               variant="contained"
               sx={{ backgroundColor: 'rgba(42, 41, 39, 1)' }}
             >
-              Save
+              Sign Up
             </Button>
           </Box>
         </Box>
@@ -156,4 +155,4 @@ const ZedgooProfile = () => {
   );
 };
 
-export default ZedgooProfile;
+export default SuperAdminSignUp;

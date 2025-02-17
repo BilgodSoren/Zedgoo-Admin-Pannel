@@ -3,27 +3,22 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import SuperAdminSignIn from './Views/SuperAdminSignIn';
-import Sidebar from './Views/Sidebar';
-import NavigationLinks from './Views/link';
-import EyeDetails from './Views/ViewsComponent/EyesDetails';
-import UserManagement from './Views/UserManagement';
-import SettingsPage from './Views/Setting';
-import { Dashboard } from '@mui/icons-material';
-import Profile from './Views/Profile';
+import Sidebar from './Views/Universal/Sidebar';
+import Profile from './Views/Universal/Profile';
+import UserSearch from './Views/UserManagement/UserSearch';
+import { useLocation } from 'react-router-dom';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+ 
+      {/* <Sidebar /> */}
+      {/* <Sidebar/> */}
+      {/* <Profile/> */}
+      <App/>
+      {/* <UserSearch/> */}
 
-    <App/>
-    {/* <SettingsPage/> */}
-    {/* <SuperAdminSignIn/> */}
-    {/* <Sidebar/> */}
-    {/* <Dashboard/> */}
-    {/* <Profile /> */}
-    {/* <UserManagement/> */}
-    {/* <EyeDetails/> */}
   </React.StrictMode>
 );
 

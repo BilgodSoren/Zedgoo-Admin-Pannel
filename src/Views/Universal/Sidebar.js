@@ -3,8 +3,9 @@ import { Box, Typography, Button } from '@mui/material';
 import { NavLink } from 'react-router-dom';
 import Dashboard from './Dashboard';
 import Profile from './Profile';
-import SettingsPage from './Sidebar';
+import SettingsPage from './Setting';
 import SuperAdminSignIn from './SuperAdminSignIn';
+import HelpPage from './Help';
 
 const Sidebar = () => {
   const [selectedButton, setSelectedButton] = React.useState(null);
@@ -28,7 +29,7 @@ const Sidebar = () => {
         }}>
           <Button 
             component={NavLink} 
-            to="/dashboard" 
+            to="/Profile" 
             style={{ marginRight: 10, fontSize: '13px', textAlign: 'center' }}
             onClick={() => handleButtonSelect('dashboard')}
             sx={{
@@ -86,7 +87,7 @@ const Sidebar = () => {
           </Button>
           <Button 
             component={NavLink} 
-            to="/settings" // Corrected the route path here
+            to="/Setting"
             style={{ marginRight: 10, fontSize: '13px', textAlign: 'center', marginTop: '5px' }}
             onClick={() => handleButtonSelect('settings')}
             sx={{
@@ -98,7 +99,7 @@ const Sidebar = () => {
           </Button>
           <Button 
             component={NavLink} 
-            to="/help" 
+            to="/Help" 
             sx={{ fontSize: '13px', textAlign: 'center' }}
             onClick={() => handleButtonSelect('help')}
             style={{

@@ -7,15 +7,18 @@ import Sidebar from './Sidebar';
 import { Box,Typography,AppBar,Button } from '@mui/material';
 import {IconButton} from '@mui/material';
 import NavigationLinks from './link';
+import { useEffect } from 'react';
+
+
 
 
 
 
 const Dashboard = () => {
-
+ 
   return (
    <Box>
-    {/* <Sidebar/> */}
+    <Sidebar/>
     
    </Box>
      
