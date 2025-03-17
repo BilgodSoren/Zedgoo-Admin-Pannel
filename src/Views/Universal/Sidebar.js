@@ -1,117 +1,59 @@
 import * as React from 'react';
-import { Box, Typography, Button } from '@mui/material';
+import { Box, Typography, Button, useTheme } from '@mui/material';
 import { NavLink } from 'react-router-dom';
-import Dashboard from './Dashboard';
-import Profile from './Profile';
-import SettingsPage from './Setting';
-import SuperAdminSignIn from './SuperAdminSignIn';
-import HelpPage from './Help';
+import SidebarTheme from '../Themes/UniversalThemes/SidebarTheme';
+import {ThemeProvider} from '@mui/material';
 
 const Sidebar = () => {
+  // const theme = useTheme();
   const [selectedButton, setSelectedButton] = React.useState(null);
+  // const SidebarTheme = SidebarTheme(theme, selectedButton);
 
   const handleButtonSelect = (buttonId) => {
     setSelectedButton(buttonId);
+
+
+    
   };
 
   return (
-    <Box sx={{ backgroundColor: 'rgba(42, 41, 39, 1)', width: '12%', height: '100vh', display: 'flex', flexDirection: 'column' }}>
-      <Typography variant='h4' mt={1} color={'white'} sx={{ textAlign: 'center' }}>Zedgoo</Typography>
+    <ThemeProvider theme={SidebarTheme}>
 
-      {/* sidebar buttons */}
-      <Box display={'flex'} flexDirection={'column'} justifyContent={'space-between'} height={'100%'}>
-        <Box borderTop={'1px solid white'} mt={2} sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-between',
-          height: '16vh',
-          width: '100%',
-        }}>
-          <Button 
-            component={NavLink} 
-            to="/Profile" 
-            style={{ marginRight: 10, fontSize: '13px', textAlign: 'center' }}
-            onClick={() => handleButtonSelect('dashboard')}
-            sx={{
-              backgroundColor: selectedButton === 'dashboard' ? 'white' : 'rgba(42, 41, 39, 1)',
-              color: selectedButton === 'dashboard' ? 'black' : 'white',
-            }}
-          >
+
+   
+    <Box sx={SidebarTheme.sidebarContainer}>
+      <Typography variant='h4' mt={1} color={'white'} sx={SidebarTheme.title}>Zedgoo</Typography>
+      <Typography mt={3} color={'rgba(123, 123, 123, 1)'} sx={SidebarTheme.mainMenuText}>MAIN MENU</Typography>
+
+      {/* Sidebar buttons */}
+      <Box sx={SidebarTheme.menuContainer}>
+        <Box sx={SidebarTheme.topButtonsContainer}>
+          <Button component={NavLink} to="/sidebar" sx={SidebarTheme.button('dashboard')} onClick={() => handleButtonSelect('dashboard')}>
             DASHBOARD
           </Button>
-          <Button 
-            component={NavLink} 
-            to="/userManagement" 
-            style={{ marginRight: 10, fontSize: '13px', textAlign: 'center' }}
-            onClick={() => handleButtonSelect('userManagement')}
-            sx={{
-              backgroundColor: selectedButton === 'userManagement' ? 'white' : 'rgba(42, 41, 39, 1)',
-              color: selectedButton === 'userManagement' ? 'black' : 'white',
-            }}
-          >
+          <Button component={NavLink} to="/userManagement" sx={SidebarTheme.button('userManagement')} onClick={() => handleButtonSelect('userManagement')}>
             USER MANAGEMENT
           </Button>
-          <Button 
-            component={NavLink} 
-            to="/batchManagement" 
-            style={{ fontSize: '13px', textAlign: 'center' }}
-            onClick={() => handleButtonSelect('batchManagement')}
-            sx={{
-              backgroundColor: selectedButton === 'batchManagement' ? 'white' : 'rgba(42, 41, 39, 1)',
-              color: selectedButton === 'batchManagement' ? 'black' : 'white',
-            }}
-          >
+          <Button component={NavLink} to="/batchManagement" sx={SidebarTheme.button('batchManagement')} onClick={() => handleButtonSelect('batchManagement')}>
             BATCH MANAGEMENT
           </Button>
         </Box>
 
-        {/* bottom buttons */}
-        <Box mt={2} sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-between',
-          height: '16vh',
-          width: '100%',
-        }}>
-          <Button 
-            component={NavLink} 
-            to="/SuperAdminSignIn" 
-            style={{ marginRight: 10, fontSize: '13px', textAlign: 'center', marginTop: '5px' }}
-            onClick={() => handleButtonSelect('logout')}
-            sx={{
-              backgroundColor: selectedButton === 'logout' ? 'white' : 'rgba(42, 41, 39, 1)',
-              color: selectedButton === 'logout' ? 'black' : 'white',
-            }}
-          >
+        {/* Bottom buttons */}
+        <Box sx={SidebarTheme.bottomButtonsContainer}>
+          <Button component={NavLink} to="/SuperAdminSignIn" sx={SidebarTheme.button('logout')} onClick={() => handleButtonSelect('logout')}>
             LOG OUT
           </Button>
-          <Button 
-            component={NavLink} 
-            to="/Setting"
-            style={{ marginRight: 10, fontSize: '13px', textAlign: 'center', marginTop: '5px' }}
-            onClick={() => handleButtonSelect('settings')}
-            sx={{
-              backgroundColor: selectedButton === 'settings' ? 'white' : 'rgba(42, 41, 39, 1)',
-              color: selectedButton === 'settings' ? 'black' : 'white',
-            }}
-          >
-            SETTINGS
+          <Button component={NavLink} to="/Setting" sx={SidebarTheme.button('settings')} onClick={() => handleButtonSelect('settings')}>
+            SETTING
           </Button>
-          <Button 
-            component={NavLink} 
-            to="/Help" 
-            sx={{ fontSize: '13px', textAlign: 'center' }}
-            onClick={() => handleButtonSelect('help')}
-            style={{
-              backgroundColor: selectedButton === 'help' ? 'white' : 'rgba(42, 41, 39, 1)',
-              color: selectedButton === 'help' ? 'black' : 'white',
-            }}
-          >
+          <Button component={NavLink} to="/Help" sx={SidebarTheme.button('help')} onClick={() => handleButtonSelect('help')}>
             HELP
           </Button>
         </Box>
       </Box>
     </Box>
+    </ThemeProvider>
   );
 };
 

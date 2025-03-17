@@ -1,36 +1,35 @@
 import * as React from 'react';
-import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import { Box } from '@mui/material';
+import { Box, TextField } from '@mui/material';
+// import useTheme from '@mui/material';
+import {useTheme} from '@mui/material';
+// import BatchDetails1Styles from '../BatchThemes/BatchDetails1Styles'; // Import styles
+import BatchDetails1Theme from '../Themes/BatchThemes/BatchDetails1theme';
+
 
 export default function BatchDetails1() {
-  return (
-    <div>
-      <div style={{ textAlign: 'center', marginBottom: '20px' }}>
-        <div style={{
-          width: '80px',
-          height: '80px',
-          marginLeft: "40%",
-          borderRadius: '50%',
-          backgroundColor: '#f2f2f2',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          border: '2px solid #00bff'
-        }}>
-          <h1 style={{ fontSize: '30px', color: '#007bff' }}>A</h1>
-        </div>
-      </div>
-        <Box display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'}>
+  const theme = useTheme(); // Access theme
+  const styles = BatchDetails1Theme(theme); // Apply styles
 
-      <TextField   label="Batch Name" size="small" sx={{ marginBottom: '10px',width:'92%' }} />
-      <TextField  label="Batch ID" size="small" sx={{ marginBottom: '10px',width:'92%' }} />
-      <TextField  label="Subject" size="small" sx={{ marginBottom: '10px',width:'92%' }} />
-      <TextField  label="Trainer" size="small" sx={{ marginBottom: '10px',width:'92%' }} />
-      <div style={{ textAlign: 'center', marginTop: '20px' }}>
-        <Button variant="contained">Save</Button>,
-      </div>
+  return (
+    <Box sx={styles.container}>
+      {/* Avatar Box */}
+      <Box style={{ textAlign: 'center', marginBottom: '20px' }}>
+        <Box sx={styles.avatarBox}>
+          <h1 style={styles.avatarText}>A</h1>
         </Box>
-    </div>
+      </Box>
+
+      {/* Form Fields */}
+      <Box display="flex" flexDirection="column" justifyContent="center" alignItems="center">
+        <TextField label="Batch Name" size="small" sx={styles.textField} />
+        <TextField label="Batch ID" size="small" sx={styles.textField} />
+        <TextField label="Subject" size="small" sx={styles.textField} />
+        <TextField label="Trainer" size="small" sx={styles.textField} />
+
+        {/* Save Button */}
+        <Button sx={styles.saveButton} variant="contained">Save</Button>
+      </Box>
+    </Box>
   );
 }

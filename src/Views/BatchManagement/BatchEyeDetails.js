@@ -3,115 +3,60 @@ import Avatar from '@mui/material/Avatar';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import EditIcon from '@mui/icons-material/Edit';
-import { styled } from '@mui/material/styles';
 import { Box } from '@mui/material';
+import { useTheme } from '@mui/material';
 import q from './w.jpg'; // Replace with the correct path to your image file
-
-const Item = styled(Grid)(({ theme }) => ({
-  padding: theme.spacing(1),
-  textAlign: 'left',
-}));
+import BatchEyeDetailsTheme from '../Themes/BatchThemes/BatchEyeDetailsTheme';
 
 export default function BatchEyeDetails() {
+  const theme = useTheme();
+  const styles = BatchEyeDetailsTheme(theme);
+
   return (
-    <Box
-      sx={{
-        // color: 'black',
-        // margin: '10px',
-        // position: 'absolute',
-        // right: '20px',
-        // top: '150px',
-        // display: 'flex',
-        // flexDirection: 'column',
-        // justifyContent: 'flex-start',
-        // height: '67.5vh',
-        // width: '28%',
-        border: '0.4px solid whitesmoke',
-        boxShadow: '0px 0px 1px grey',
-        // borderRadius: '8px',
-        // padding: '16px',
-      }}
-    >
-      <Box
-        sx={{
-          position: 'absolute',
-          right: '10px',
-          top: '16px',
-          cursor: 'pointer',
-          
-        }}
-      >
+    <Box sx={styles.container}>
+      <Box sx={styles.editIcon}>
         <EditIcon />
       </Box>
-      <Avatar
-        alt="Gavin Kumari"
-        src={q}
-        sx={{
-          margin: '16px auto',
-          width: 100,
-          height: 100,
-          border: '5px solid whitesmoke',
-        }}
-      />
-      <Typography
-        variant="h6"
-        sx={{
-          textAlign: 'center',
-          fontWeight: 'bold',
-          color: 'black',
-        }}
-      >
+      <Avatar alt="Gavin Kumari" src={q} sx={styles.avatar} />
+      <Typography variant="h6" sx={styles.nameText}>
         Gavin Kumari
       </Typography>
-      <Typography
-        sx={{
-          textAlign: 'center',
-          fontSize: '12.5px',
-          color: 'black',
-          marginBottom: '16px',
-        }}
-      >
+      <Typography sx={styles.subText}>
         Enrolment Number: ABCD#001
       </Typography>
-      <Grid
-      sx={{marginLeft:'5px',   color: 'black',}} 
-      container spacing={2}>
+      <Grid sx={styles.gridContainer} container spacing={2}>
         <Grid item xs={12}>
-          <Typography variant="subtitle1" sx={{ fontWeight: 'bold' }}>
+          <Typography variant="subtitle1" sx={styles.sectionTitle}>
             Mobile No.
           </Typography>
-          <Typography sx={{ fontSize: '12.5px', color: 'black' }} gutterBottom>
+          <Typography sx={styles.sectionText} gutterBottom>
             +91-9876543210
           </Typography>
         </Grid>
         <Grid item xs={12}>
-          <Typography variant="subtitle1" sx={{ fontWeight: 'bold' }}>
+          <Typography variant="subtitle1" sx={styles.sectionTitle}>
             Email ID
           </Typography>
-          <Typography sx={{ fontSize: '12.5px', color: 'black' }} gutterBottom>
+          <Typography sx={styles.sectionText} gutterBottom>
             Emailid@email.com
           </Typography>
         </Grid>
         <Grid item xs={12}>
-          <Typography variant="subtitle1" sx={{ fontWeight: 'bold' }}>
+          <Typography variant="subtitle1" sx={styles.sectionTitle}>
             ORG ID
           </Typography>
-          <Typography sx={{ fontSize: '12.5px', color: 'black' }} gutterBottom>
+          <Typography sx={styles.sectionText} gutterBottom>
             23001
           </Typography>
         </Grid>
         <Grid item xs={12}>
-          <Typography variant="subtitle1" sx={{ fontWeight: 'bold' }}>
+          <Typography variant="subtitle1" sx={styles.sectionTitle}>
             Batches Enrolled
           </Typography>
           {Array(4)
             .fill('Batch (Batch ID 1)')
             .map((batch, index) => (
-              <Typography
-                key={index}
-                sx={{ fontSize: '12px', color: 'black' }}
-                gutterBottom
-              >
+              <Typography key={index} sx={styles.batchText} gutterBottom>
                 {batch}
               </Typography>
             ))}

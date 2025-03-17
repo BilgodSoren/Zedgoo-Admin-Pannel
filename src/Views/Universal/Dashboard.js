@@ -6,8 +6,10 @@ import { Circle } from '@mui/icons-material';
 import Sidebar from './Sidebar';
 import { Box,Typography,AppBar,Button } from '@mui/material';
 import {IconButton} from '@mui/material';
-import NavigationLinks from './link';
+// import NavigationLinks from './link';
 import { useEffect } from 'react';
+import DashboardTheme from '../Themes/UniversalThemes/DashboardTheme';
+import { useTheme } from '@emotion/react';
 
 
 
@@ -15,6 +17,9 @@ import { useEffect } from 'react';
 
 
 const Dashboard = () => {
+
+  const theme = useTheme();
+  const styles = DashboardTheme(theme);
  
   return (
    <Box>

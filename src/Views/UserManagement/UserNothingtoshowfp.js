@@ -6,6 +6,8 @@ import EditIcon from '@mui/icons-material/Edit';
 import { styled } from '@mui/material/styles';
 import { Box } from '@mui/material';
 import q from './w.jpg'; // Replace with the correct path to your image file
+import ShowNothingTheme from '../Themes/UserThemes/ShowNothingTheme';
+import { useTheme } from '@emotion/react';
 
 const Item = styled(Grid)(({ theme }) => ({
     padding: theme.spacing(1),
@@ -13,31 +15,14 @@ const Item = styled(Grid)(({ theme }) => ({
 }));
 
 export default function UserNothingtoShowFp() {
+    const theme = useTheme();
+    const styles = ShowNothingTheme(theme);
     return (
         <Box
-            sx={{
-                color: 'black',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                height: '67.5vh',
-                width: '100%',
-                border: '0.4px solid whitesmoke',
-                boxShadow: '0px 0px 1px grey',
-                // borderRadius: '8px',
-                // padding: '16px',
-            }}
+            sx={styles.container}
         >
             <Box
-                sx={{
-                    position: 'absolute',
-                    right: '20px',
-                    top: '16px',
-                    cursor: 'pointer',
-                    marginLeft: '5px',
-                    justifyContent: 'center'
-                }}
+                sx={styles.content}
             >
 
             </Box>

@@ -1,105 +1,65 @@
 import * as React from 'react';
-
 import Button from '@mui/material/Button';
-import { Box } from '@mui/material';
+import { Box, TextField, IconButton, InputAdornment } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
-import { TextField, IconButton, InputAdornment } from '@mui/material';
+import { useTheme } from '@mui/material';
+import BatchDetails2Theme from '../Themes/BatchThemes/BatchDetails2Theme'; // Updated import
+// import BatchDetails2Theme from '../BatchThemes/BatchDetails2Theme';
 
 export default function BatchDetails2() {
+  const theme = useTheme();
+  const styles = BatchDetails2Theme(theme); // Using BatchDetails2Theme
+
   return (
-    <div>
-      <div style={{ textAlign: 'center', marginBottom: '20px' }}>
-        <div style={{
-          width: '80px',
-          height: '80px',
-          marginLeft: "40%",
-          borderRadius: '50%',
-          backgroundColor: '#f2f2f2',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          border: '2px solid #00bff'
-        }}>
-          <h1 style={{ fontSize: '30px', color: '#007bff' }}>A</h1>
-        </div>
-      </div>
-        <Box display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'}>
-
-      <TextField   label="Batch Name" size="small" sx={{ marginBottom: '10px',width:'92%' }} />
-      <TextField  label="Batch ID" size="small" sx={{ marginBottom: '10px',width:'92%' }} />
-      <TextField  label="Subject" size="small" sx={{ marginBottom: '10px',width:'92%' }} />
-      <TextField  label="Trainer" size="small" sx={{ marginBottom: '10px',width:'92%' }} />
-
-
-
-
-      <Box display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'} mt={2}>
-
-
-      <TextField
-      variant="outlined"
-      placeholder="T9155 : Name of trainer"
-      InputProps={{
-        style: {
-          borderRadius: '30px',
-          borderColor: '#CCCCCC',
-         width:'20pc',
-         height:'40px',
-         marginBottom:'10px'
-        },
-        endAdornment: (
-          <InputAdornment position="end">
-            <IconButton edge="end" size="small">
-              <CloseIcon color="error" />
-            </IconButton>
-          </InputAdornment>
-        )
-      }}
-    //   sx={{
-    //     width: '100%',
-    //     '& .MuiOutlinedInput-root': {
-    //       '& fieldset': {
-    //         borderWidth: '1px',
-    //       },
-    //     },
-    //   }}
-    />
-
-<TextField
-      variant="outlined"
-      placeholder="T9155 : Name of trainer"
-      InputProps={{
-        style: {
-          borderRadius: '30px',
-          borderColor: '#CCCCCC',
-        width:'20pc',
-        height:'40px',
-        },
-        endAdornment: (
-          <InputAdornment position="end">
-            <IconButton edge="end" size="small">
-              <CloseIcon color="error" />
-            </IconButton>
-          </InputAdornment>
-        )
-      }}
-    //   sx={{
-    //     width: '100%',
-    //     '& .MuiOutlinedInput-root': {
-    //       '& fieldset': {
-    //         borderWidth: '1px',
-    //       },
-    //     },
-    //   }}
-    />
-
-</Box>
-      <div style={{ textAlign: 'center', marginTop: '100px' }}>
-
-
-        <Button  variant="contained">Save</Button>,
-      </div>
+    <Box sx={styles.container}>
+      <Box style={{ textAlign: 'center', marginBottom: '20px' }}>
+        <Box sx={styles.avatarBox}>
+          <h1 style={styles.avatarText}>A</h1>
         </Box>
-    </div>
+      </Box>
+
+      <Box display="flex" flexDirection="column" justifyContent="center" alignItems="center">
+        <TextField label="Batch Name" size="small" sx={styles.textField} />
+        <TextField label="Batch ID" size="small" sx={styles.textField} />
+        <TextField label="Subject" size="small" sx={styles.textField} />
+        <TextField label="Trainer" size="small" sx={styles.textField} />
+
+        <Box display="flex" flexDirection="column" justifyContent="center" alignItems="center" mt={2}>
+          <TextField
+            variant="outlined"
+            placeholder="T9155 : Name of trainer"
+            InputProps={{
+              style: styles.trainerField,
+              endAdornment: (
+                <InputAdornment position="end">
+                  <IconButton edge="end" size="small">
+                    <CloseIcon color="error" />
+                  </IconButton>
+                </InputAdornment>
+              ),
+            }}
+          />
+
+          <TextField
+            variant="outlined"
+            placeholder="T9155 : Name of trainer"
+            InputProps={{
+              style: styles.trainerField,
+              endAdornment: (
+                <InputAdornment position="end">
+                  <IconButton edge="end" size="small">
+                    <CloseIcon color="error" />
+                  </IconButton>
+                </InputAdornment>
+              ),
+            }}
+          />
+        </Box>
+
+        <Button sx={styles.saveButton} variant="contained">
+          Save
+        </Button>
+      </Box>
+    </Box>
   );
 }

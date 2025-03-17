@@ -1,24 +1,29 @@
 import React from 'react';
-import { Box, Typography, Accordion, AccordionSummary, AccordionDetails, Button, Divider, List, ListItem, ListItemText } from '@mui/material';
+import { Box, Typography, Accordion, AccordionSummary, AccordionDetails, Button, Divider, List, ListItem, ListItemText, useTheme } from '@mui/material';
 import { ExpandMore } from '@mui/icons-material';
+import HelpTheme from '../Themes/UniversalThemes/HelpTheme';
 
 const HelpPage = () => {
+const theme = useTheme();
+const styles = HelpTheme(theme);
+
+
   return (
-    <Box  display="flex"  ml={35} sx={{ width: '78%', display: 'flex', flexDirection: 'column',position:'absolute',top:'10px',}}>
+    <Box  display="flex"  ml={35} sx={styles.container}>
 
    
-    <Box sx={{ padding: '20px', backgroundColor: 'rgba(245, 245, 245, 1)', minHeight: '100vh' }}>
+    <Box sx={styles.ctnbox}>
       {/* Header */}
-      <Typography variant="h4" sx={{ fontWeight: 'bold', marginBottom: 4 }}>
+      <Typography variant="h4" sx={styles.header}>
         Help & Support
       </Typography>
 
       {/* FAQ Section */}
-      <Box sx={{ marginBottom: 4 }}>
-        <Typography variant="h5" sx={{ fontWeight: '600', marginBottom: 2 }}>
+      <Box sx={styles.faq}>
+        <Typography variant="h5" sx={styles.questions}>
           Frequently Asked Questions
         </Typography>
-        <Divider sx={{ marginBottom: 2 }} />
+        <Divider sx={styles.divider} />
         <Accordion>
           <AccordionSummary expandIcon={<ExpandMore />}>
             <Typography>How do I reset my password?</Typography>
@@ -52,21 +57,23 @@ const HelpPage = () => {
       </Box>
 
       {/* Contact Section */}
-      <Box sx={{ marginBottom: 2 }}>
-        <Typography variant="h5" sx={{ fontWeight: '600', marginBottom: 2 }}>
+      <Box mb={2}>
+        <Typography variant="h5" fontWeight={600} mb={2}>
           Contact Support
         </Typography>
-        <Divider sx={{ marginBottom: 2 }} />
-        <Typography variant="body1" sx={{ marginBottom: 1 }}>
+        <Divider  />
+        <Typography variant="body1" mb={1}>
           For immediate assistance, reach out to us:
         </Typography>
         <Typography variant="body1">
           📧 Email: <strong>support@example.com</strong>
         </Typography>
-        <Typography variant="body1" sx={{ marginBottom: 2 }}>
+        <Typography variant="body1"mb={2}>
           📞 Phone: <strong>+123-456-7890</strong>
         </Typography>
-        <Button variant="contained" color="primary" sx={{ marginRight: 2 }}>
+        <Button 
+        
+        variant="contained" color="primary" >
           Email Us
         </Button>
         <Button variant="outlined" color="primary">
@@ -76,10 +83,10 @@ const HelpPage = () => {
 
       {/* Resources Section */}
       <Box>
-        <Typography variant="h5" sx={{ fontWeight: '600' }}>
+        <Typography variant="h5" fontWeight={600}>
           Additional Resources
         </Typography>
-        <Divider sx={{ marginBottom: 2 }} />
+        <Divider  />
        
       </Box>
     </Box>

@@ -1,46 +1,47 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
-import Dashboard from './Views/Universal/Dashboard';
-import UserManagement from './Views/UserManagement/UserManagement';
-import BatchManagement from './Views/BatchManagement/Batchmangement';
-import Profile from './Views/Universal/Profile';
-import Sidebar from './Views/Universal/Sidebar';
-import EyeDetails from './Views/UserManagement/UserEyesDetails';
-import SettingsPage from './Views/Universal/Setting';
-import SuperAdminSignIn from './Views/Universal/SuperAdminSignIn';
-import SuperAdminSignUp from './Views/Universal/SuperAdminSignUp';
-import ZedgooProfile from './Views/Universal/ZedgooProfile';
-import NavigationLinks from './Views/Universal/link';
-import EmptyDetails from './Views/UserManagement/UserEmptyDetails';
-import HelpPage from './Views/Universal/Help';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import Dashboard from "./Views/Universal/Dashboard";
+import UserManagement from "./Views/UserManagement/UserManagement";
+// import BatchManagement from "./Views/BatchManagement/BatchManagement"; // Fixed typo
+import BatchManagement from "./Views/BatchManagement/Batchmangement";
+import Profile from "./Views/Profiles/Profile";
+import Sidebar from "./Views/Universal/Sidebar";
+// import SettingsPage from "./Views/Universal/SettingsPage"; // Ensure consistent naming
+
+import SuperAdminSignIn from "./Views/Universal/SuperAdminSignIn";
+import SuperAdminSignUp from "./Views/Universal/SuperAdminSignUp";
+import CreateProfile from "./Views/Universal/CreateProfile";
+import EmptyDetails from "./Views/UserManagement/UserEmptyDetails";
+import HelpPage from "./Views/Universal/Help";
+import SettingsPage from "./Views/Universal/Setting";
+
 
 function AppContent() {
-  const location = useLocation(); // ✅ useLocation() is safe here
+  const location = useLocation();
 
-  const showNavigationLinks = [
-    '/userManagement',
-    '/batchManagement',
-    '/Setting',
-    '/Help'
-  ].includes(location.pathname);
+  // Improved logic for showing the Sidebar
+  const showNavigationLinks = ["/userManagement", "/batchManagement", "/Setting", "/Help"].some((path) =>
+    location.pathname.startsWith(path)
+  );
 
   return (
     <>
-      {showNavigationLinks && <NavigationLinks />}
+      {showNavigationLinks && <Sidebar />}
       <Routes>
-        <Route path="/Profile" element={<Profile />} />
-        <Route path="/Logout" element={<EmptyDetails />} />
-        <Route path="/EmptyDetails" element={<EmptyDetails />} />
+        <Route path="/" element={<Profile />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/sidebar" element={<Sidebar />} />
+        <Route path="/logout" element={<EmptyDetails />} />
+        <Route path="/emptyDetails" element={<EmptyDetails />} />
         <Route path="/userManagement" element={<UserManagement />} />
-        <Route path="/eyeDetails" element={<EyeDetails />} />
         <Route path="/batchManagement" element={<BatchManagement />} />
-        <Route path="/Setting" element={<SettingsPage />} />
-        <Route path="/SuperAdminSignIn" element={<SuperAdminSignIn />} />
-        <Route path="/SuperAdminSignUp" element={<SuperAdminSignUp />} />
-        <Route path="/ZedgooProfile" element={<ZedgooProfile />} />
-        <Route path="/Dashboard" element={<Dashboard />} />
-        <Route path="/Help" element={<HelpPage />} />
+        <Route path="/setting" element={<SettingsPage />} />
+        <Route path="/superAdminSignIn" element={<SuperAdminSignIn />} />
+        <Route path="/superAdminSignUp" element={<SuperAdminSignUp />} />
+        <Route path="/createprofile" element={<CreateProfile />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/help" element={<HelpPage />} />
       </Routes>
     </>
   );
@@ -49,7 +50,7 @@ function AppContent() {
 function App() {
   return (
     <BrowserRouter>
-     <AppContent/>
+      <AppContent />
     </BrowserRouter>
   );
 }

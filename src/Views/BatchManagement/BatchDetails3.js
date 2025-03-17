@@ -13,8 +13,13 @@ import {
 import EditIcon from '@mui/icons-material/Edit';
 import PauseCircleIcon from '@mui/icons-material/PauseCircle';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import { useTheme } from '@mui/material/styles';
+import BatchDetails3Theme from '../Themes/BatchThemes/BatchDetails3Theme';
 
 function BatchDetails3() {
+  const theme = useTheme();
+  const styles = BatchDetails3Theme(theme);
+
   const [tabValue, setTabValue] = React.useState(0);
 
   const handleTabChange = (event, newValue) => {
@@ -22,26 +27,23 @@ function BatchDetails3() {
   };
 
   return (
-    <Paper sx={{ p: 3 }}>
-      <Box display="flex" justifyContent="center" position="relative">
-        <Avatar sx={{ width: 80, height: 80 }}>A</Avatar>
-        <IconButton
-          sx={{ position: 'absolute', top: 0, right: 0 }}
-          aria-label="edit"
-        >
+    <Paper sx={styles.paper}>
+      <Box sx={styles.avatarBox}>
+        <Avatar sx={styles.avatar}>A</Avatar>
+        <IconButton sx={styles.editIcon} aria-label="edit">
           <EditIcon />
         </IconButton>
       </Box>
-      
-      <Typography variant="h6" align="center" sx={{ mt: 2 }}>
+
+      <Typography variant="h6" sx={styles.centerText}>
         Batch ID
       </Typography>
-      <Typography variant="body2" align="center" color="text.secondary">
+      <Typography variant="body2" sx={styles.batchInfo}>
         Batch Name : ABCD#001
       </Typography>
 
-      <Box display="flex" justifyContent="center" alignItems="center" mt={2}>
-        <Typography variant="body2" color="text.secondary" mr={1}>
+      <Box sx={styles.statusBox}>
+        <Typography variant="body2" color="black" mr={1} fontWeight={600}>
           Batch Status
         </Typography>
         <PauseCircleIcon fontSize="small" />
@@ -50,50 +52,55 @@ function BatchDetails3() {
         </Typography>
       </Box>
 
-      <Tabs value={tabValue} onChange={handleTabChange} centered sx={{ mt: 3 }}>
-        <Tab label="Batch Details" />
-        <Tab label="People" />
+      <Divider sx={styles.divider} />
+      <Tabs value={tabValue} onChange={handleTabChange} centered>
+        <Tab sx={styles.tabs} label="Batch Details" />
+        <Tab sx={styles.tabs} label="People" />
       </Tabs>
 
-      <Divider sx={{ my: 2 }} />
-
       {tabValue === 0 && (
-        <Box>
-          <Typography variant="subtitle2" color="text.secondary">
+        <Box sx={styles.detailsBox}>
+          <Typography sx={styles.subtitle} variant="subtitle2">
             Start Date
           </Typography>
-          <Typography variant="body1">DD/MM/YYYY</Typography>
-
-          <Typography variant="subtitle2" color="text.secondary" mt={2}>
-            Batch URL
+          <Typography sx={styles.bodyText} variant="body1">
+            DD/MM/YYYY
           </Typography>
-          <Box display="flex" alignItems="center">
-            <Typography variant="body1">app.zedgoo.com/abc-def-ghi</Typography>
+
+          <Typography sx={styles.subtitle} variant="subtitle2">
+            Batch URL
+            <ContentCopyIcon sx={styles.copyIcon} fontSize="small" />
+          </Typography>
+
+          <Box sx={styles.urlBox}>
+            <Typography sx={styles.bodyText} variant="body1">
+              app.zedgoo.com/abc-def-ghi
+            </Typography>
             <Tooltip title="Copy URL">
-              <IconButton size="small" sx={{ ml: 1 }}>
-                <ContentCopyIcon fontSize="small" />
-              </IconButton>
+              <IconButton size="small" sx={{ ml: 1 }}></IconButton>
             </Tooltip>
           </Box>
 
-          <Typography variant="subtitle2" color="text.secondary" mt={2}>
+          <Typography sx={styles.subtitle} variant="subtitle2">
             ORG ID
           </Typography>
-          <Typography variant="body1">23001</Typography>
+          <Typography sx={styles.bodyText} variant="body1">
+            23001
+          </Typography>
 
-          <Typography variant="subtitle2" color="text.secondary" mt={2}>
+          <Typography sx={styles.subtitle} variant="subtitle2">
             Trainers
           </Typography>
-          <Typography variant="body1">T9155 : Name of trainer</Typography>
-          <Typography variant="body1">T9475 : Name of trainer</Typography>
+          <Typography sx={styles.bodyText} variant="body1">
+            T9155 : Name of trainer
+          </Typography>
+          <Typography sx={styles.bodyText} variant="body1">
+            T9475 : Name of trainer
+          </Typography>
         </Box>
       )}
 
-      {tabValue === 1 && (
-        <Box>
-          {/* Add content for the "People" tab here */}
-        </Box>
-      )}
+      {tabValue === 1 && <Box>{/* Add content for the "People" tab here */}</Box>}
     </Paper>
   );
 }

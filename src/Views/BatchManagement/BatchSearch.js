@@ -10,8 +10,19 @@ import { useState } from 'react';
 import BatchNothingtoShowFp from './BatchNothingtoshowfp';
 // import BatchEmptyDetails from './BatchEmptyDetails';
 import { Circle } from '@mui/icons-material';
+import BatchDetails1 from './BatchDetails1';
+import BatchDetails2 from './BatchDetails2';
+import BatchDetails4 from './BatchDetails4';
+import {useTheme} from '@mui/material';
+import BatchSearchTheme from '../Themes/BatchThemes/BatchSearchTheme';
+
 const BatchSearch = () => {
-  const [user, setUser] = React.useState('');
+  const theme = useTheme();
+  const styles = BatchSearchTheme(theme);
+
+
+
+  // const [user, setUser] = React.useState('');
   const [session, setSession] = React.useState('');
   const [batch, setBatch] = React.useState('');
 
@@ -24,20 +35,14 @@ const BatchSearch = () => {
   return (
     <Box>
       <Box
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          margin: '20px',
-          borderRadius: '5px',
-        }}
+        sx={styles.box1}
       >
         {/* Search and Add New */}
-        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '20px', marginTop: '15px' }}>
-          <Typography color="black">Search:</Typography>
+        <Box sx={styles.box2}>
+          <Typography color="rgba(130, 134, 144, 1)">Search:</Typography>
           <TextField
-            sx={{ width: '300px', height: '40px', borderRadius: '10px' }}
-            placeholder="Name / Enrolment No. / Mobile no."
+            sx={styles.textfield}
+            placeholder="Batch Id / Trainer Id / Subject ."
             InputProps={{
               endAdornment: <Search />,
             }}
@@ -46,12 +51,8 @@ const BatchSearch = () => {
           />
           {/* Changed button to TextButton */}
           <Button
-            onClick={SearchhandleVisibility} // Corrected to onClick
-            sx={{
-              height: '40px',
-              color: 'blue', // This can be customized for the new button style
-              textTransform: 'none', // Keeps the text from being uppercase
-            }}
+            // Corrected to onClick
+            sx={styles.addbtn}
             variant='outlined' // Style changed to text button
           >
             + Add New
@@ -60,7 +61,7 @@ const BatchSearch = () => {
       </Box>
 
       {/* Conditionally render the EmptyDetails component */}
-      {showEmptyDetails && <BatchEmptyDetails /> }
+      {showEmptyDetails && <BatchDetails4 /> }
     </Box>
   );
 };

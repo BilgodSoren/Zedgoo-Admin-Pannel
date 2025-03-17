@@ -16,13 +16,18 @@ import {
   ListItemText,
   ListItemSecondaryAction,
 } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import EditIcon from '@mui/icons-material/Edit';
 import PauseCircleIcon from '@mui/icons-material/PauseCircle';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import AddIcon from '@mui/icons-material/Add';
+import BatchDetails4Theme from '../Themes/BatchThemes/BatchDetails4Theme';
 
 function BatchDetails4() {
+  const theme = useTheme();
+  const styles = BatchDetails4Theme(theme);
+
   const [tabValue, setTabValue] = React.useState(0);
 
   const handleTabChange = (_, newValue) => {
@@ -50,17 +55,7 @@ function BatchDetails4() {
   };
 
   return (
-    <Box
-      sx={{
-        p: 3,
-        maxWidth: 400,
-        mx: 'auto',
-        border: '1px solid #ddd',
-        borderRadius: 2,
-        boxShadow: 3,
-        bgcolor: 'background.paper',
-      }}
-    >
+    <Box sx={styles.container}>
       <AvatarSection />
       <BatchHeader />
       <BatchStatus />
@@ -78,10 +73,7 @@ function AvatarSection() {
   return (
     <Box display="flex" justifyContent="center" position="relative" mb={2}>
       <Avatar sx={{ width: 80, height: 80 }}>A</Avatar>
-      <IconButton
-        sx={{ position: 'absolute', top: 0, right: 0 }}
-        aria-label="edit"
-      >
+      <IconButton sx={{ position: 'absolute', top: 0, right: 0 }} aria-label="edit">
         <EditIcon />
       </IconButton>
     </Box>
@@ -91,10 +83,10 @@ function AvatarSection() {
 function BatchHeader() {
   return (
     <>
-      <Typography variant="h6" align="center">
+      <Typography variant="h6" align="center" color={'black'}>
         Batch ID
       </Typography>
-      <Typography variant="body2" align="center" color="text.secondary">
+      <Typography variant="body2" align="center" color={'black'}>
         Batch Name : ABCD#001
       </Typography>
     </>
@@ -103,8 +95,8 @@ function BatchHeader() {
 
 function BatchStatus() {
   return (
-    <Box display="flex" justifyContent="center" alignItems="center" mt={2}>
-      <Typography variant="body2" color="text.secondary" mr={1}>
+    <Box display="flex" justifyContent="center" alignItems="center" mt={2} color={'black'}>
+      <Typography variant="body2" mr={1}>
         Batch Status
       </Typography>
       <PauseCircleIcon fontSize="small" />
@@ -117,7 +109,7 @@ function BatchStatus() {
 
 function BatchInfo({ startDate, batchUrl, orgId, trainers }) {
   return (
-    <Box>
+    <Box sx={{ color: 'black' }}>
       <InfoRow label="Start Date" value={startDate} />
       <Box display="flex" alignItems="center" mt={1}>
         <InfoRow label="Batch URL" value={batchUrl} />
@@ -145,7 +137,7 @@ function InfoRow({ label, value }) {
 }
 
 function PeopleSection({ title }) {
-  const people = Array(4).fill("Garrett Winters"); // Example data
+  const people = Array(4).fill("Garrett Winters");
 
   return (
     <Box>
@@ -168,10 +160,6 @@ function PeopleSection({ title }) {
       </Box>
 
       <List dense>
-        <ListItem>
-          <Checkbox edge="start" />
-          <ListItemText primary="Action" />
-        </ListItem>
         {people.map((name, index) => (
           <ListItem key={index} sx={{ display: 'flex', alignItems: 'center' }}>
             <Checkbox edge="start" />
