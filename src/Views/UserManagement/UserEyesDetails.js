@@ -8,6 +8,8 @@ import { Box, Divider } from '@mui/material';
 import q from './w.jpg'; // Replace with the correct path to your image file
 import UserEyeDetailsTheme from '../Themes/UserThemes/UserEyeDetailsTheme';
 import { useTheme } from '@emotion/react';
+import { useState } from 'react';
+import UserNothingtoShowFp from './UserNothingFp';
 
 const Item = styled(Grid)(({ theme }) => ({
   padding: theme.spacing(1),
@@ -15,6 +17,13 @@ const Item = styled(Grid)(({ theme }) => ({
 }));
 
 export default function UserEyeDetails() {
+
+  const [Edit, setEdit] = useState(false);
+  const [showEyeDetails, setShowEyeDetails] = useState(true);
+
+  const handleVisibilityToggle = () => {
+    setEdit((prevState) => !prevState); // Toggles between true and false
+  };
 
   const theme = useTheme();
   const styles = UserEyeDetailsTheme(theme);
@@ -24,6 +33,7 @@ export default function UserEyeDetails() {
     >
       <Box
         sx={styles.editicon}
+        onClick={handleVisibilityToggle}
       >
         <EditIcon />
       </Box>
@@ -46,7 +56,6 @@ export default function UserEyeDetails() {
       </Typography>
 
       <Divider/>
-
 
       <Grid
       sx={styles.gridcontainer} 
@@ -92,6 +101,11 @@ export default function UserEyeDetails() {
             ))}
         </Grid>
       </Grid>
+       <Box
+              sx={styles.sideBox}
+            >
+              {/* {showEyeDetails ? <UserEyeDetails /> : <UserNothingtoShowFp />} */}
+            </Box>
     </Box>
   );
 }

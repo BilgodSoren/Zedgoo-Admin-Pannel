@@ -6,7 +6,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import { styled } from '@mui/material/styles';
 import { Box } from '@mui/material';
 import q from './w.jpg'; // Replace with the correct path to your image file
-import ShowNothingTheme from '../Themes/UserThemes/ShowNothingTheme';
+import NothingfpTheme from '../Themes/UserThemes/NothingfpTheme';
 import { useTheme } from '@emotion/react';
 
 const Item = styled(Grid)(({ theme }) => ({
@@ -14,9 +14,9 @@ const Item = styled(Grid)(({ theme }) => ({
     textAlign: 'left',
 }));
 
-export default function UserNothingtoShowFp() {
+export default function ShowNothing() {
     const theme = useTheme();
-    const styles = ShowNothingTheme(theme);
+    const styles = NothingfpTheme(theme);
     return (
         <Box
             sx={styles.container}

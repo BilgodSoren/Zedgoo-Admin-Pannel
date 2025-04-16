@@ -29,7 +29,7 @@ const BatchesTheme = (theme) => ({
         borderRadius: '10px',
     },
     celldata: {
-        fontWeight: 590, padding: '4px', align: "center",
+        fontWeight: 590, padding: '6px', align: "center",
         fontfamily: 'Poppins sans-serif'
     },
     icon: {
@@ -46,12 +46,14 @@ const BatchesTheme = (theme) => ({
     lastbox: {
         position: 'absolute',
         right: '20px',
-        top: '140px',
+        top: '110px',
+        marginTop:'40px',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         width: '28%',
     }
+
 
 
 

@@ -33,7 +33,7 @@ const Profile = () => {
             {/* Header Button */}
             <Button
               component={NavLink}
-              to="/SuperAdminSignIn"
+              to="/superAdminSignUp"
               sx={ProfileTheme.customStyles.loginbtn}
               color="inherit"
             >

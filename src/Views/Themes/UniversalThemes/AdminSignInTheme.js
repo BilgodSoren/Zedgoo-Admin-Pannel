@@ -25,12 +25,17 @@ const AdminSignInTheme = createTheme({
     marginTop: '70px',
   },
   title: {
-    fontWeight: '300',
+    fontWeight: '400',
     marginBottom: '24px', // Replaced theme.spacing(3)
     fontFamily: Fontfamily.fontSecondary.fontFamily,
+    // fontSize:'40px'
+  },
+  signintxt:{
+    fontFamily: Fontfamily.fontInter.fontFamily,
+
   },
   subtitle: {
-    fontWeight: '200',
+    fontWeight: '300',
     marginBottom: '16px', // Replaced theme.spacing(2)
   },
   formContainer: {
@@ -76,7 +81,7 @@ const AdminSignInTheme = createTheme({
     flexDirection: 'column',
     alignItems: 'center',
     fontSize: '12px',
-    marginTop: '8px', // Replaced theme.spacing(1)
+    // marginTop: '8px', // Replaced theme.spacing(1)
   },
 });
 

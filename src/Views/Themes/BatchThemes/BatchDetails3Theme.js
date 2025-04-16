@@ -2,7 +2,7 @@
 
 const BatchDetails3Theme = (theme) => ({
   paper: {
-    padding: theme.spacing(4),
+    padding: theme.spacing(2),
   },
   avatarBox: {
     display: 'flex',

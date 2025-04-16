@@ -4,7 +4,7 @@ const BatchSearchTheme = (theme) => ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        margin: '20px',
+        margin: '15px',
         borderRadius: '5px',
     },
 

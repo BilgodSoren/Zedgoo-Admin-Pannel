@@ -7,9 +7,11 @@ const NothingToShowTheme = (theme) => ({
       justifyContent: 'center',
       height: '67.5vh',
       width: '100%',
+     
       border: `0.4px solid ${theme.palette.divider}`,
       boxShadow: `0px 0px 1px ${theme.palette.grey[500]}`,
       backgroundColor: theme.palette.background.paper,
+      
     },
   
     emptyBox: {

@@ -1,42 +1,37 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button'; // This is for other buttons
+import Button from '@mui/material/Button';
 import { Typography } from '@mui/material';
 import { Search } from '@mui/icons-material';
-// import EmptyDetails from './ViewsComponent/EmptyDetails';
-import BatchEmptyDetails from './BatchEmptyDetails';
 import { useState } from 'react';
-import BatchNothingtoShowFp from './BatchNothingtoshowfp';
-// import BatchEmptyDetails from './BatchEmptyDetails';
-import { Circle } from '@mui/icons-material';
-import BatchDetails1 from './BatchDetails1';
-import BatchDetails2 from './BatchDetails2';
-import BatchDetails4 from './BatchDetails4';
-import {useTheme} from '@mui/material';
+import { useTheme } from '@mui/material';
 import BatchSearchTheme from '../Themes/BatchThemes/BatchSearchTheme';
+
+import BatchDetails1 from './BatchDetails1';
+import BatchDetails4 from './BatchDetails4';
 
 const BatchSearch = () => {
   const theme = useTheme();
   const styles = BatchSearchTheme(theme);
 
-
-
-  // const [user, setUser] = React.useState('');
-  const [session, setSession] = React.useState('');
-  const [batch, setBatch] = React.useState('');
+  const [session, setSession] = useState('');
+  const [batch, setBatch] = useState('');
 
   const [showEmptyDetails, setShowEmptyDetails] = useState(false);
+  const [showAddNewForm, setShowAddNewForm] = useState(false);
 
-  const SearchhandleVisibility = () => {
-    setShowEmptyDetails((prevState) => !prevState); // Toggle visibility of EmptyDetails
+  const handleAddNewClick = () => {
+    setShowAddNewForm(true);
+  };
+
+  const handleCancel = () => {
+    setShowAddNewForm(false);
   };
 
   return (
     <Box>
-      <Box
-        sx={styles.box1}
-      >
+      <Box sx={styles.box1}>
         {/* Search and Add New */}
         <Box sx={styles.box2}>
           <Typography color="rgba(130, 134, 144, 1)">Search:</Typography>
@@ -49,19 +44,22 @@ const BatchSearch = () => {
             variant="outlined"
             size="small"
           />
-          {/* Changed button to TextButton */}
           <Button
-            // Corrected to onClick
+            onClick={handleAddNewClick}
             sx={styles.addbtn}
-            variant='outlined' // Style changed to text button
+            variant="outlined"
           >
             + Add New
           </Button>
         </Box>
       </Box>
 
-      {/* Conditionally render the EmptyDetails component */}
-      {showEmptyDetails && <BatchDetails4 /> }
+      {/* Toggle view for Add New Form or other components */}
+      {showAddNewForm ? (
+        <BatchDetails1 onCancel={handleCancel} />
+      ) : (
+        showEmptyDetails && <BatchDetails1/>
+      )}
     </Box>
   );
 };

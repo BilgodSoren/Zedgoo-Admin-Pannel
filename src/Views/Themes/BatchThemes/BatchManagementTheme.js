@@ -1,3 +1,5 @@
+import Fontfamily from "../../Universal/fontfamilyTheme";
+
 const BatchManagementTheme = (theme) =>({
 
     mainbox : {
@@ -17,7 +19,7 @@ const BatchManagementTheme = (theme) =>({
         display:'flex', justifyContent:'space-between',alignItems:'center'
     },
     batchtypography:{
-         color: 'black', fontWeight: '700', textAlign: 'left'
+         color: 'black', fontWeight: '700', textAlign: 'left',  fontFamily: Fontfamily.fontPrimary.fontFamily,
     },
     boxstudentlist:{
          margin: '0px 15px 15px 15px ',width: '68.7% '

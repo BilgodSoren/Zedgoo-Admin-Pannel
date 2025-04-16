@@ -1,3 +1,5 @@
+import '@fontsource/poppins'
+
 const UserTrainerTheme = (theme) => ({
     box1: {
         display: 'flex',
@@ -22,22 +24,24 @@ const UserTrainerTheme = (theme) => ({
     tablerow: {
         '&:nth-child(even)': { backgroundColor: 'whitesmoke' },
         height: '30px',
-        borderRadius: '10px',
+        borderRadius: '10px', fontWeight: 400,
+
     },
-    celldata:{
-        fontWeight: 590, padding: '4px', align:"center"
+    celldata: {
+        fontWeight: 590, padding: '6px', align: "center", fontsize: '14px', fontFamily: "Poppins",
+        fontWeight: 400,
     },
-    icon:{
+    icon: {
         cursor: 'pointer',
-        padding: '3px',
+        padding: '5px',
         borderRadius: '5px',
         color: 'black',
         textTransform: 'none',
         '&:hover': {
-          backgroundColor: 'rgba(0, 0, 0, 0.05)',
+            backgroundColor: 'rgba(0, 0, 0, 0.05)',
         },
     },
-    lastbox:{
+    lastbox: {
         position: 'absolute',
         right: '20px',
         top: '140px',

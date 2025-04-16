@@ -15,7 +15,7 @@ const StyledButton = styled(Button)(({ theme }) => ({
   },
 }));
 
-const UserEmptyDetails = () => {
+const UserAddNew = () => {
   const theme = useTheme();
   const styles = UserEmptyDetailsTheme(theme);
 
@@ -45,4 +45,4 @@ const UserEmptyDetails = () => {
   );
 };
 
-export default UserEmptyDetails;
+export default UserAddNew;

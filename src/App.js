@@ -12,7 +12,7 @@ import Sidebar from "./Views/Universal/Sidebar";
 import SuperAdminSignIn from "./Views/Universal/SuperAdminSignIn";
 import SuperAdminSignUp from "./Views/Universal/SuperAdminSignUp";
 import CreateProfile from "./Views/Universal/CreateProfile";
-import EmptyDetails from "./Views/UserManagement/UserEmptyDetails";
+import UserAddNew from "./Views/UserManagement/UserAddNew";
 import HelpPage from "./Views/Universal/Help";
 import SettingsPage from "./Views/Universal/Setting";
 
@@ -32,8 +32,8 @@ function AppContent() {
         <Route path="/" element={<Profile />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/sidebar" element={<Sidebar />} />
-        <Route path="/logout" element={<EmptyDetails />} />
-        <Route path="/emptyDetails" element={<EmptyDetails />} />
+        <Route path="/logout" element={<UserAddNew />} />
+        <Route path="/emptyDetails" element={<UserAddNew />} />
         <Route path="/userManagement" element={<UserManagement />} />
         <Route path="/batchManagement" element={<BatchManagement />} />
         <Route path="/setting" element={<SettingsPage />} />

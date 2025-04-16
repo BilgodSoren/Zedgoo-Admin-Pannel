@@ -20,6 +20,7 @@ import BatchManagementTheme from '../Themes/BatchThemes/BatchManagementTheme';
 import BatchesList from './BatchesList';
 import {Avatar} from '@mui/material';
 import avatar from './avatar.jpg'
+import BatchNothingtoShowFp from './BatchNothingtoshowfp';
 
 
 
@@ -46,8 +47,8 @@ const styles = BatchManagementTheme(theme);
 
           <Box sx={styles.batchbox}>
 
-            <Typography variant='h5' mb={2} mt={1} ml={2} sx={styles.batchtypography}>
-              BatchManagement
+            <Typography variant='h5' mb={2}  ml={2} sx={styles.batchtypography}>
+              Batch Management
             </Typography>
             <Box>
               <BatchSearch />
@@ -60,7 +61,8 @@ const styles = BatchManagementTheme(theme);
 
 
 
-            <BatchesList />                   
+            {/* <BatchesList />                    */}
+            <BatchNothingtoShowFp/>
           
           </Box>
 

@@ -2,7 +2,7 @@ const UserEmptyDetailsTheme = (theme) => ({
     container: {
       position: "absolute",
       right: "5px",
-      top: "0px",
+      top: "30px",
       height: "68.5vh",
       width: "90%",
       display: "flex",

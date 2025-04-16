@@ -12,7 +12,7 @@ import { Box } from '@mui/material';
 import { NavLink } from 'react-router-dom';
 
 // import q from './ViewsComponent/q.jpg';
-// import q from './q.jpg'?
+import p from './p.png'
 import BatchEyeDetails from '../BatchManagement/BatchEyeDetails';
 import BatchNothingtoShowFp from '../BatchManagement/BatchNothingtoshowfp';
 import BatchDetails4 from '../BatchManagement/BatchDetails4';
@@ -29,36 +29,37 @@ import {ButtonBase} from '@mui/material';
 import BatchStudentTheme from '../Themes/BatchThemes/BatchesTheme';
 import BatchTrainerTheme from '../Themes/UserThemes/UserTrainerTheme';
 import w from './w.jpg';
+import UserNothingtoShowFp from './UserNothingFp';
 const students = [
-  {
-    profile: <Avatar alt="Remy Sharp" src={w} />,
-    name: 'Garrett Winters',
-    enrolmentNo: 'XXXXXXXXXX',
-    mobile: '987 654 3210',
-    email: 'info@example.com',
-  },
+ {
+     profile: <Avatar alt="Travis Howard" src={p}  sx={{ width: 32, height: 32,marginLeft:'20px' }} />,
+     name: 'Garrett Winters',
+     enrolmentNo: '123456789',
+     mobile: '987 654 3210',
+     email: 'info@example.com',
+   },
  
-  {
-    profile: <Avatar alt="Remy Sharp" src={w} />,
-    name: 'Garrett Winters',
-    enrolmentNo: 'XXXXXXXXXX',
-    mobile: '987 654 3210',
-    email: 'info@example.com',
-  },
-  {
-    profile: <Avatar alt="Remy Sharp" src={w} />,
-    name: 'Garrett Winters',
-    enrolmentNo: 'XXXXXXXXXX',
-    mobile: '987 654 3210',
-    email: 'info@example.com',
-  },
-  {
-    profile: <Avatar alt="Remy Sharp" src={w} />,
-    name: 'Garrett Winters',
-    enrolmentNo: 'XXXXXXXXXX',
-    mobile: '987 654 3210',
-    email: 'info@example.com',
-  },
+ {
+     profile: <Avatar alt="Travis Howard" src={p}  sx={{ width: 32, height: 32,marginLeft:'20px' }} />,
+     name: 'Garrett Winters',
+     enrolmentNo: '123456789',
+     mobile: '987 654 3210',
+     email: 'info@example.com',
+   },
+ {
+     profile: <Avatar alt="Travis Howard" src={p}  sx={{ width: 32, height: 32,marginLeft:'20px' }} />,
+     name: 'Garrett Winters',
+     enrolmentNo: '123456789',
+     mobile: '987 654 3210',
+     email: 'info@example.com',
+   },
+ {
+     profile: <Avatar alt="Travis Howard" src={p}  sx={{ width: 32, height: 32,marginLeft:'20px' }} />,
+     name: 'Garrett Winters',
+     enrolmentNo: '123456789',
+     mobile: '987 654 3210',
+     email: 'info@example.com',
+   },
  
  
   // Add more students as needed
@@ -140,7 +141,7 @@ function UserTrainerList() {
       <Box
         sx={styles.lastbox}
       >
-        {showEyeDetails ? <BatchEyeDetails /> : <BatchPeople/>}
+        {showEyeDetails ? <BatchEyeDetails /> : <UserNothingtoShowFp/>}
       </Box>
     </Box>
   );

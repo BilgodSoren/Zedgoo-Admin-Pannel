@@ -55,7 +55,7 @@ const CreateProfile = () => {
           <Box sx={CreateProfileTheme.imageBox}>
             <img src={zedgoo} alt="Zedgoo Logo" />
           </Box>
-          <Typography sx={CreateProfileTheme.imageTitle} variant="h4" color="white">Zedgoo</Typography>
+          <Typography sx={CreateProfileTheme.imageTitle} variant="h4" color="white">ZedGoo</Typography>
         </Box>
       </Box>
 

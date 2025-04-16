@@ -4,7 +4,7 @@ import Fontfamily from "../../Universal/fontfamilyTheme";
 const AdminSignUpTheme = createTheme({
   typography: {
     fontFamily: Fontfamily.fontPrimary.fontFamily,
-  },
+ },
 
   container: {
     width: '70%',
@@ -26,17 +26,23 @@ const AdminSignUpTheme = createTheme({
     marginTop: '70px',
   },
   title: {
-    fontWeight: '400',
-    marginBottom: '24px', // Replaced theme.spacing(3)
+    fontWeight: '300',
+    // fontFamily: Fontfamily.fontSecondary,
     fontFamily: Fontfamily.fontSecondary.fontFamily,
+    // marginBottom: theme.spacing(3),
+    marginBottom:'20px'
   },
-  signin:{
-    fontWeight:500,
-  fontFamily: Fontfamily.fontInter.fontFamily,
+  profile: {
+    // fontWeight: '300',
+    fontFamily: Fontfamily.fontInter,
+    // marginBottom: theme.spacing(3),
+ 
   },
   subtitle: {
-    fontWeight: '200',
-    marginBottom: '16px', // Replaced theme.spacing(2)
+    fontWeight: '300',
+    fontFamily: Fontfamily.fontSecondary,
+    // marginBottom: theme.spacing(2),
+    marginBottom:'20px'
   },
   form: {
     display: 'flex',
@@ -47,16 +53,19 @@ const AdminSignUpTheme = createTheme({
   inputField: {
     marginBottom: '10px',
     backgroundColor:'rgba(246, 246, 246, 1)',
+    border:'rgba(108, 108, 108, 1)'
   },
   selectContainer: {
     display: 'flex',
+    marginBottom: '10px',
     flexDirection: 'row',
     justifyContent: 'space-around',
   },
   selectField: {
+    backgroundColor:'rgba(246, 246, 246, 1)',
     marginBottom: '30px',
     width: '49%',
-    backgroundColor:'rgba(246, 246, 246, 1)',
+          border:'rgba(108, 108, 108, 1)'
   },
   signUpButton: {
     backgroundColor: 'rgba(42, 41, 39, 1)',
@@ -69,21 +78,22 @@ const AdminSignUpTheme = createTheme({
     width: '40%',
     borderRadius: '0px 10px 10px 0px',
   },
-  imageBox: { 
+  imageBox: {
     marginLeft: '115px',
   },
   imageTitle: {
-    fontFamily: 'Comfortaa, sans-serif',
-    textAlign: 'center',
-    fontWeight:700
+    fontWeight:'500',
+  textAlign:'center',
+  fontFamily: Fontfamily.fontSecondary.fontFamily,
   },
   footer: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     fontSize: '12px',
-    marginTop: '8px', // Replaced theme.spacing(1)
+    // marginTop: theme.spacing(1),
   },
 });
+
 
 export default AdminSignUpTheme;

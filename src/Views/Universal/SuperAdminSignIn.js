@@ -15,7 +15,7 @@ const SuperAdminSignIn = () => {
         {/* TextField Section */}
         <Box sx={AdminSignInTheme.textFieldContainer}>
           <Typography variant='h4' sx={AdminSignInTheme.title}>ZedGoo</Typography>
-          <Typography variant='h6'  fontWeight={500}>Sign In</Typography>
+          <Typography variant='h6' sx={AdminSignInTheme.signintxt}  fontWeight={500}>Sign In</Typography>
           <Typography variant='subtitle1' sx={AdminSignInTheme.subtitle}>to access Zedgoo</Typography>
 
           <Box sx={AdminSignInTheme.formContainer}>

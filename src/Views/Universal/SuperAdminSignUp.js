@@ -22,7 +22,7 @@ const SuperAdminSignUp = () => {
         <Box sx={AdminSignUpTheme.inputContainer}>
           <Typography variant="h4" sx={AdminSignUpTheme.title}>ZedGoo</Typography>
           <Typography variant="h6"  fontWeight={500}>Sign Up</Typography>
-          <Typography variant="subtitle1" sx={AdminSignUpTheme.subtitle}>to access Zedgoo</Typography>
+          <Typography variant="subtitle1" sx={AdminSignUpTheme.subtitle}>to access ZedGoo</Typography>
 
           <Box component="form" onSubmit={onSubmit} sx={AdminSignUpTheme.form}>
             <TextField placeholder="Company Name" sx={AdminSignUpTheme.inputField} />

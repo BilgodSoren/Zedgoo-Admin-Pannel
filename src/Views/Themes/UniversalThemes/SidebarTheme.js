@@ -1,7 +1,7 @@
 import { createTheme } from "@mui/material/styles";
 import Fontfamily from "../../Universal/fontfamilyTheme";
 
-const SidebarTheme = createTheme({
+const   SidebarTheme = createTheme({
 
   typography: {
     fontFamily: Fontfamily.fontPrimary.fontFamily,
@@ -15,23 +15,27 @@ const SidebarTheme = createTheme({
   },
   title: {
     textAlign: 'center',
-    fontFamily: 'Comfortaa, sans-serif',
+    fontFamily: Fontfamily.fontSecondary.fontFamily,
+   
   },
   mainMenuText: {
-    textAlign: 'center',
-    fontSize: '12px',
+    textAlign: 'left',
+    fontSize: '10px',
+    fontweight:400,
+    fontFamily: Fontfamily.fontPrimary.fontFamily,
   },
   menuContainer: {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
     height: '100%',
+    textAlign:'left'
   },
   topButtonsContainer: {
     borderTop: '1px solid white',
     // marginTop: theme.spacing(2),
     fontFamily: Fontfamily.fontInter.fontFamily,
-
+    textAlign:"left",
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
@@ -53,8 +57,8 @@ const SidebarTheme = createTheme({
     fontFamily: Fontfamily.fontInter.fontFamily,
     
     marginRight: 1,
-    fontSize: '12px',
-    textAlign: 'center',
+    fontSize: '10px',
+    textAlign: 'left',
     color: 'white',
     // backgroundColor: getButtonStyle === buttonId ? 'white' : 'rgba(42, 41, 39, 1)',
     // color: getButtonStyle === buttonId ? 'black' : 'white',

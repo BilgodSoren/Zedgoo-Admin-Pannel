@@ -3,17 +3,18 @@ import {
   Box, TextField, FormControl, Select, MenuItem, Button, FormLabel, Typography, useTheme 
 } from "@mui/material";
 import { Search } from "@mui/icons-material";
-import EmptyDetails from "../UserManagement/UserEmptyDetails";
+import EmptyDetails from "./UserAddNew";
 import UserSearchTheme from "../Themes/UserThemes/UserSearchTheme";
 
 import UserTrainerList from "./UserTrainerList";
 import UserStudentList from "./UserStudentList"; // Assuming this exists
+import UserNothingtoShowFp from "./UserNothingFp";
 
 const UserSearch = () => {
   const theme = useTheme();
   const styles = UserSearchTheme(theme);
 
-  const [user, setUser] = useState("student"); // Default to "student"
+  const [user, setUser] = useState(""); // No default selection
   const [session, setSession] = useState("");
   const [batch, setBatch] = useState("");
   const [showEmptyDetails, setShowEmptyDetails] = useState(false);
@@ -30,6 +31,7 @@ const UserSearch = () => {
               value={user} 
               onChange={(e) => setUser(e.target.value)}
             >
+             
               <MenuItem value="student">Student</MenuItem>
               <MenuItem value="trainer">Trainer</MenuItem>
             </Select>
@@ -68,22 +70,20 @@ const UserSearch = () => {
             variant="outlined"
             size="small"
           />
-          <Button sx={styles.addButton} variant="contained" 
-          // onClick={() => setShowEmptyDetails(!showEmptyDetails)}
-          >
+          <Button sx={styles.addButton} variant="contained" onClick={() => setShowEmptyDetails((prev) => !prev)}>
             + Add New
           </Button>
         </Box>
       </Box>
-    <Box sx={{    margin: '0px 15px 15px 15px',
-    width: '68.5%',}}> 
 
-     
-      {user === "student" ? <UserStudentList /> : <UserTrainerList />}
-    </Box>
-
-      {/* Show EmptyDetails component */}
-      {showEmptyDetails && <EmptyDetails />}
+      <Box sx={{ margin: '0px 15px 15px 15px', width: '68.5%' }}> 
+        {user === "student" && <UserStudentList />}
+        {user === "trainer" && <UserTrainerList />}
+        {user === "" && <UserNothingtoShowFp />}
+      </Box>
+      <Box sx={styles.empty}>
+        {showEmptyDetails && <EmptyDetails />} 
+      </Box>
     </Box>
   );
 };

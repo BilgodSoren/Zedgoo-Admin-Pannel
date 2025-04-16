@@ -3,11 +3,11 @@ import '@fontsource/poppins'
 const UserStudentListTheme = (theme) => ({
 
   container: {
-    display: 'flex',
+    // display: 'flex',
     border: '1px solid whitesmoke',
     boxShadow: '0px 0px 5px grey',
     borderRadius: '10px',
-    width: '130vh',
+    // width: '130vh',
   },
 
   tableContainer: {
@@ -18,7 +18,9 @@ const UserStudentListTheme = (theme) => ({
   tableHeaderCell: {
     fontWeight: 400,
     fontFamily: 'poppins',
-    color: 'rgba(42, 41, 39, 1)'
+    color: 'rgba(42, 41, 39, 1)',
+    fontSize:'14px'
+    // marginleft:'10px'
 
   },
  
@@ -30,11 +32,12 @@ const UserStudentListTheme = (theme) => ({
     borderRadius: '10px',
     margin: 'auto'
   },
+
   tableCell: {
     marginleft: '45px',
     fontSize: '14px',
     fontWeight: 400,
-    padding: '5px',
+    padding: '6px',
     fontFamily: "Poppins",
     fontWeight: 400,
     color: 'rgba(42, 41, 39, 1)'
@@ -55,6 +58,7 @@ const UserStudentListTheme = (theme) => ({
     right: '20px',
     top: '160px',
     display: 'flex',
+    marginTop:'25px',
     flexDirection: 'column',
     justifyContent: 'center',
     width: '28%',
