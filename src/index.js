@@ -24,14 +24,7 @@ root.render(
     {/* <UserSearch/> */}
     <App/>
     {/* <BatchAddStudent/> */}
-    {/* <BatchAddTrainer /> */}
-    {/* <CreateProfile/> */}
-    {/* <Profile/> */}
-    {/* <BatchManagement/> */}
-    {/* <ZedgooProfile/> */}
-    {/* <AddStudentDialog/> */}
-    {/* <AddStudentDialog/> */}
-    {/* <SuperAdminSignIn/> */}
+
 
   </React.StrictMode>
 );

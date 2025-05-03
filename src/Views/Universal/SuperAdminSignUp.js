@@ -25,9 +25,9 @@ const SuperAdminSignUp = () => {
           <Typography variant="subtitle1" sx={AdminSignUpTheme.subtitle}>to access ZedGoo</Typography>
 
           <Box component="form" onSubmit={onSubmit} sx={AdminSignUpTheme.form}>
-            <TextField placeholder="Company Name" sx={AdminSignUpTheme.inputField} />
+            <TextField placeholder="Company Name" sx={AdminSignUpTheme.inputField} />   
             <TextField placeholder="Email Address" type="email" sx={AdminSignUpTheme.inputField} />
-            <TextField placeholder="Password" type="password" sx={AdminSignUpTheme.inputField} />
+            <TextField placeholder="Password" type="password" sx={AdminSignUpTheme.inputField} /> 
 
             {/* Country and State Selection */}
             <Box sx={AdminSignUpTheme.selectContainer}>

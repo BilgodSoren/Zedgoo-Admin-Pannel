@@ -1,3 +1,6 @@
+
+import { createTheme } from "@mui/material/styles";
+import Fontfamily from "../../Universal/fontfamilyTheme";
 const UserSearchTheme = (theme) => ({
 
   searchContainer: {
@@ -28,6 +31,7 @@ const UserSearchTheme = (theme) => ({
     fontWeight: 700,
     fontSize: "15px",
     color: "black",
+    fontFamily: Fontfamily.fontPrimary.fontFamily,
   },
 
   select: {
@@ -36,6 +40,7 @@ const UserSearchTheme = (theme) => ({
     borderRadius: "10px",
     color: "black",
     fontWeight: 500,
+    fontFamily: Fontfamily.fontPrimary.fontFamily,
   },
 
   goButton: {

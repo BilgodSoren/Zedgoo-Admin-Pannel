@@ -15,7 +15,8 @@ import CreateProfile from "./Views/Universal/CreateProfile";
 import UserAddNew from "./Views/UserManagement/UserAddNew";
 import HelpPage from "./Views/Universal/Help";
 import SettingsPage from "./Views/Universal/Setting";
-
+import StudentSignUp from "./Views/Student/SignIn/StudentSignUp";
+// import Signin from "./Views/Student/Signup/Signin";
 
 function AppContent() {
   const location = useLocation();

@@ -1,5 +1,6 @@
 import { createTheme } from "@mui/material/styles";
 import Fontfamily from "../../Universal/fontfamilyTheme";
+import { WrapText } from "@mui/icons-material";
 
 const AdminSignUpTheme = createTheme({
   typography: {
@@ -7,10 +8,12 @@ const AdminSignUpTheme = createTheme({
  },
 
   container: {
+    
     width: '70%',
     height: '80vh',
     display: 'flex',
     flexDirection: 'row',
+  
     marginLeft: '15%',
     marginTop: '5%',
     border: '1px solid grey',
@@ -19,6 +22,8 @@ const AdminSignUpTheme = createTheme({
   inputContainer: {
     display: 'flex',
     flexDirection: 'column',
+    flexwrap: 'wrap',
+    
     textAlign: 'left',
     width: '60%',
     height: '100px',

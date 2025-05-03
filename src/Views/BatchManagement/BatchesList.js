@@ -11,23 +11,39 @@ import BatchPeople from './BatchPeople';
 import { useTheme } from '@mui/material';
 import BatchesTheme from '../Themes/BatchThemes/BatchesTheme';
 import BatchNothingtoShowFp from './BatchNothingtoshowfp';
+import BatchDetails3 from './BatchDetails3';
+import BatchDetails4 from './BatchDetails4';
+import BatchDetails1 from './BatchDetails1';
+import BatchDetails2 from './BatchDetails2';
+import BatchDetails5 from './BatchDetails5';
+
 
 // Sample student data
 const students = [
   {
-    profile: <Avatar alt="Remy Sharp" />,
-    name: 'Garrett Winters',
-    enrolmentNo: 'XXXXXXXXXX',
-    mobile: '987 654 3210',
-    email: 'info@example.com',
+    profile:  <Avatar alt="https://images.pexels.com/photos/1533478/pexels-photo-1533478.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" sx={{ width: 34, height: 34, marginLeft: '20px' }} />,
+    BatchName: 'Garrett Winters',
+    BatchID: 'XXXXXXXXXX',
+    StartDate: 'DD/MM/YYYY',
+    BatchUrl: 'app.zedgoo.com.....',
+
+
   },
   {
-    profile: <Avatar alt="Remy Sharp" />,
-    name: 'Garrett Winters',
-    enrolmentNo: 'XXXXXXXXXX',
-    mobile: '987 654 3210',
-    email: 'info@example.com',
+    profile:  <Avatar alt="https://images.pexels.com/photos/31547093/pexels-photo-31547093/free-photo-of-majestic-white-swan-gliding-on-calm-water.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"  sx={{ width: 34, height: 34, marginLeft: '20px' }} />,
+    BatchName: 'Garrett Winters',
+    BatchID: 'XXXXXXXXXX',
+    StartDate: 'DD/MM/YYYY',
+    BatchUrl: 'app.zedgoo.com.....',
   },
+  {
+    profile:  <Avatar alt="https://images.pexels.com/photos/31547093/pexels-photo-31547093/free-photo-of-majestic-white-swan-gliding-on-calm-water.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"  sx={{ width: 34, height: 34, marginLeft: '20px' }} />,
+    BatchName: 'Garrett Winters',
+    BatchID: 'XXXXXXXXXX',
+    StartDate: 'DD/MM/YYYY',
+    BatchUrl: 'app.zedgoo.com.....',
+  },
+  
 ];
 
 function BatchesList() {
@@ -51,10 +67,10 @@ function BatchesList() {
           <TableHead>
             <TableRow>
               <TableCell sx={styles.cellheading} align="center">Profile</TableCell>
-              <TableCell sx={styles.cellheading}>Name</TableCell>
-              <TableCell sx={styles.cellheading} align="center">Enrolment No.</TableCell>
-              <TableCell sx={styles.cellheading} align="center">Mobile</TableCell>
-              <TableCell sx={styles.cellheading} align="center">Email</TableCell>
+              <TableCell sx={styles.cellheading}>Batches Name</TableCell>
+              <TableCell sx={styles.cellheading} align="center">Batch ID.</TableCell>
+              <TableCell sx={styles.cellheading} align="center">Start Date</TableCell>
+              <TableCell sx={styles.cellheading} align="center">Batch url</TableCell>
               <TableCell sx={styles.cellheading} align="center">View</TableCell>
             </TableRow>
           </TableHead>
@@ -62,16 +78,16 @@ function BatchesList() {
             {students.map((row, index) => (
               <TableRow key={index} sx={styles.tablerow}>
                 <TableCell sx={styles.celldata}>{row.profile}</TableCell>
-                <TableCell sx={styles.celldata}>{row.name}</TableCell>
-                <TableCell sx={styles.celldata} align="center">{row.enrolmentNo}</TableCell>
-                <TableCell sx={styles.celldata} align="center">{row.mobile}</TableCell>
-                <TableCell sx={styles.celldata} align="center">{row.email}</TableCell>
+                <TableCell sx={styles.celldata}>{row.BatchName}</TableCell>
+                <TableCell sx={styles.celldata} align="center">{row.BatchID}</TableCell>
+                <TableCell sx={styles.celldata} align="center">{row.StartDate}</TableCell>
+                <TableCell sx={styles.celldata} align="center">{row.BatchUrl}</TableCell>
                 <TableCell sx={styles.celldata} align="center">
                   <NavLink to="#" style={{ textDecoration: 'none', display: 'inline-block' }}>
                     <ButtonBase onClick={handleVisibilityToggle}>
                       <VisibilityIcon sx={styles.icon} />
                     </ButtonBase>
-                  </NavLink>  
+                  </NavLink>   
                 </TableCell>
               </TableRow>
             ))}
@@ -81,7 +97,7 @@ function BatchesList() {
 
       {/* Dynamic Section */}
       <Box sx={styles.lastbox}>
-        {showEyeDetails ? <BatchEyeDetails /> : <BatchNothingtoShowFp />}
+        {showEyeDetails ? <BatchDetails3/> : <BatchNothingtoShowFp />}
       </Box>
     </Box>
   );

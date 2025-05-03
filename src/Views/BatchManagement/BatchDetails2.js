@@ -24,7 +24,7 @@ export default function BatchDetails2() {
         <TextField label="Subject" size="small" sx={styles.textField} />
         <TextField label="Trainer" size="small" sx={styles.textField} />
 
-        <Box display="flex" flexDirection="column" justifyContent="center" alignItems="center" mt={2}>
+        <Box display="flex" flexDirection="column" alignItems="center" mt={2}>
           <TextField
             variant="outlined"
             placeholder="T9155 : Name of trainer"

@@ -2,7 +2,7 @@ const BatchDetails2Theme = (theme) => ({
     container: {
       boxShadow: '0px 0px 5px grey',
       padding: theme.spacing(2),
-      borderRadius: theme.shape.borderRadius,
+
       backgroundColor: theme.palette.background.paper,
     },
     avatarBox: {

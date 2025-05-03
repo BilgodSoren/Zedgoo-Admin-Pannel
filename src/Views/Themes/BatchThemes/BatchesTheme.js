@@ -1,7 +1,8 @@
-import "@fontsource/poppins"
+import '@fontsource/poppins'
 
 const BatchesTheme = (theme) => ({
     box1: {
+  
         display: 'flex',
         flexDirection: 'row',
         border: '1px solid whitesmoke',
@@ -13,7 +14,7 @@ const BatchesTheme = (theme) => ({
 
     // }
     table: {
-        
+
         minWidth: 700
     },
     cellheading: {
@@ -30,7 +31,9 @@ const BatchesTheme = (theme) => ({
     },
     celldata: {
         fontWeight: 590, padding: '6px', align: "center",
-        fontfamily: 'Poppins sans-serif'
+        fontFamily: "Poppins",
+        fontWeight: '400',
+       
     },
     icon: {
         cursor: 'pointer',
@@ -44,10 +47,11 @@ const BatchesTheme = (theme) => ({
         },
     },
     lastbox: {
+   
         position: 'absolute',
         right: '20px',
-        top: '110px',
-        marginTop:'40px',
+        top: '100px',
+        marginTop: '40px',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',

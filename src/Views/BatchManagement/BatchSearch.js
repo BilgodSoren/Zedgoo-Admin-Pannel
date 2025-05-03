@@ -9,16 +9,11 @@ import { useTheme } from '@mui/material';
 import BatchSearchTheme from '../Themes/BatchThemes/BatchSearchTheme';
 
 import BatchDetails1 from './BatchDetails1';
-import BatchDetails4 from './BatchDetails4';
 
 const BatchSearch = () => {
   const theme = useTheme();
   const styles = BatchSearchTheme(theme);
 
-  const [session, setSession] = useState('');
-  const [batch, setBatch] = useState('');
-
-  const [showEmptyDetails, setShowEmptyDetails] = useState(false);
   const [showAddNewForm, setShowAddNewForm] = useState(false);
 
   const handleAddNewClick = () => {
@@ -27,6 +22,11 @@ const BatchSearch = () => {
 
   const handleCancel = () => {
     setShowAddNewForm(false);
+  };
+
+  const handleSave = () => {
+    // Optional: Add logic to persist/save form data
+    setShowAddNewForm(false); // Close the form after saving
   };
 
   return (
@@ -54,11 +54,9 @@ const BatchSearch = () => {
         </Box>
       </Box>
 
-      {/* Toggle view for Add New Form or other components */}
-      {showAddNewForm ? (
-        <BatchDetails1 onCancel={handleCancel} />
-      ) : (
-        showEmptyDetails && <BatchDetails1/>
+      {/* Conditional Rendering for Add New Form */}
+      {showAddNewForm && (
+        <BatchDetails1 onCancel={handleCancel} onSave={handleSave} />
       )}
     </Box>
   );

@@ -8,6 +8,7 @@ const Fontfamily = {
   },
   fontSecondary: {
     fontFamily: 'Comfortaa, sans-serif',
+    
   },
   fontInter:{
     fontFamily: 'Inter, sans-serif',

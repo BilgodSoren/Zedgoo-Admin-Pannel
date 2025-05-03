@@ -39,7 +39,7 @@ const UserStudentListTheme = (theme) => ({
     fontWeight: 400,
     padding: '6px',
     fontFamily: "Poppins",
-    fontWeight: 400,
+   
     color: 'rgba(42, 41, 39, 1)'
   },
   icon: {

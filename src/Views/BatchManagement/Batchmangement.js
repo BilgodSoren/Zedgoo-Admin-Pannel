@@ -61,8 +61,8 @@ const styles = BatchManagementTheme(theme);
 
 
 
-            {/* <BatchesList />                    */}
-            <BatchNothingtoShowFp/>
+            <BatchesList />                   
+            {/* <BatchNothingtoShowFp/> */}
           
           </Box>
 

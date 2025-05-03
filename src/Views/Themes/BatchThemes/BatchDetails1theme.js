@@ -31,8 +31,8 @@ const BatchDetails1Theme = (theme) => ({
  
   },
   avatarText: {
-    fontSize: '30px',
-    color: theme.palette.primary.main,
+    fontSize: '40px',
+    color:'rgba(171, 171, 171, 1)'
   },
   textField: {
     marginBottom: theme.spacing(1),
@@ -40,8 +40,9 @@ const BatchDetails1Theme = (theme) => ({
     height:' 40px',
   },
   saveButton: {
+    marginTop: theme.spacing(2),
     textAlign: 'center',
-    marginTop: theme.spacing(10),
+
     backgroundColor:'rgba(42, 41, 39, 1)',  
 
   }

@@ -1,6 +1,14 @@
 import React, { useState } from "react";
-import { 
-  Box, TextField, FormControl, Select, MenuItem, Button, FormLabel, Typography, useTheme 
+import {
+  Box,
+  TextField,
+  FormControl,
+  Select,
+  MenuItem,
+  Button,
+  FormLabel,
+  Typography,
+  useTheme
 } from "@mui/material";
 import { Search } from "@mui/icons-material";
 import EmptyDetails from "./UserAddNew";
@@ -26,20 +34,23 @@ const UserSearch = () => {
         <Box sx={styles.selectContainer}>
           <FormControl sx={styles.formControl}>
             <FormLabel sx={styles.formLabel}>Select User</FormLabel>
-            <Select 
-              sx={styles.select} 
-              value={user} 
+            <Select
+              sx={styles.select}
+              value={user}
               onChange={(e) => setUser(e.target.value)}
             >
-             
-              <MenuItem value="student">Student</MenuItem>
-              <MenuItem value="trainer">Trainer</MenuItem>
+              <MenuItem sx={styles.formControl} value="student">Student</MenuItem>
+              <MenuItem sx={styles.formControl} value="trainer">Trainer</MenuItem>
             </Select>
           </FormControl>
 
           <FormControl sx={styles.formControl}>
             <FormLabel sx={styles.formLabel}>Session</FormLabel>
-            <Select sx={styles.select} value={session} onChange={(e) => setSession(e.target.value)}>
+            <Select
+              sx={styles.select}
+              value={session}
+              onChange={(e) => setSession(e.target.value)}
+            >
               <MenuItem value="2023-2024">2023-2024</MenuItem>
               <MenuItem value="2024-2025">2024-2025</MenuItem>
               <MenuItem value="2025-2026">2025-2026</MenuItem>
@@ -48,7 +59,11 @@ const UserSearch = () => {
 
           <FormControl sx={styles.formControl}>
             <FormLabel sx={styles.formLabel}>Batch ID</FormLabel>
-            <Select sx={styles.select} value={batch} onChange={(e) => setBatch(e.target.value)}>
+            <Select
+              sx={styles.select}
+              value={batch}
+              onChange={(e) => setBatch(e.target.value)}
+            >
               <MenuItem value="1">1</MenuItem>
               <MenuItem value="2">2</MenuItem>
               <MenuItem value="3">3</MenuItem>
@@ -56,7 +71,9 @@ const UserSearch = () => {
           </FormControl>
 
           <Button sx={styles.goButton} variant="contained">
-            Go
+
+            {user ? "Go" : "Search"}
+
           </Button>
         </Box>
 
@@ -70,19 +87,24 @@ const UserSearch = () => {
             variant="outlined"
             size="small"
           />
-          <Button sx={styles.addButton} variant="contained" onClick={() => setShowEmptyDetails((prev) => !prev)}>
+          <Button
+            sx={styles.addButton}
+            variant="contained"
+            onClick={() => setShowEmptyDetails((prev) => !prev)}
+          >
             + Add New
           </Button>
         </Box>
       </Box>
 
-      <Box sx={{ margin: '0px 15px 15px 15px', width: '68.5%' }}> 
+      <Box sx={{ margin: "0px 15px 15px 15px", width: "68.5%" }}>
         {user === "student" && <UserStudentList />}
         {user === "trainer" && <UserTrainerList />}
         {user === "" && <UserNothingtoShowFp />}
       </Box>
+
       <Box sx={styles.empty}>
-        {showEmptyDetails && <EmptyDetails />} 
+        {showEmptyDetails && <EmptyDetails />}
       </Box>
     </Box>
   );
