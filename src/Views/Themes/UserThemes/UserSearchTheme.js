@@ -11,7 +11,7 @@ const UserSearchTheme = (theme) => ({
     padding: "10px",
     borderRadius: "5px",
     boxShadow: "0px 0px 5px grey ",
-    marginBottom: '30px'
+    marginBottom: '30px',
   },
 
   selectContainer: {

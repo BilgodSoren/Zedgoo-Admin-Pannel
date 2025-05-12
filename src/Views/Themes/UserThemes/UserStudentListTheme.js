@@ -1,4 +1,4 @@
-import '@fontsource/poppins'
+import Fontfamily from "../../Universal/fontfamilyTheme";
 
 const UserStudentListTheme = (theme) => ({
 
@@ -17,7 +17,8 @@ const UserStudentListTheme = (theme) => ({
   },
   tableHeaderCell: {
     fontWeight: 400,
-    fontFamily: 'poppins',
+    fontFamily: Fontfamily.fontPrimary.fontFamily,
+ 
     color: 'rgba(42, 41, 39, 1)',
     fontSize:'14px'
     // marginleft:'10px'
@@ -38,7 +39,7 @@ const UserStudentListTheme = (theme) => ({
     fontSize: '14px',
     fontWeight: 400,
     padding: '6px',
-    fontFamily: "Poppins",
+    fontFamily: Fontfamily.fontPrimary.fontFamily,
    
     color: 'rgba(42, 41, 39, 1)'
   },

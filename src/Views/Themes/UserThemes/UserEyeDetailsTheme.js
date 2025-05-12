@@ -1,4 +1,4 @@
-import '@fontsource/poppins'
+import Fontfamily from "../../Universal/fontfamilyTheme";
 
 
 const UserEyeDetailsTheme = (theme) => ({
@@ -7,6 +7,7 @@ const UserEyeDetailsTheme = (theme) => ({
         border: '0.4px solid whitesmoke',
         boxShadow: '0px 0px 1px grey',
         fontfamily: 'poppins sans-serif',
+        fontfamily: Fontfamily.fontPrimary.fontFamily
     },
     editicon: {
         position: 'absolute',
@@ -23,7 +24,7 @@ const UserEyeDetailsTheme = (theme) => ({
     },
 
     avatar: {
-        fontfamily: 'poppins sans-serif',
+        fontfamily: Fontfamily.fontPrimary.fontFamily,
         margin: '16px auto',
         width: 100,
         height: 100,
@@ -31,16 +32,13 @@ const UserEyeDetailsTheme = (theme) => ({
     },
     name: {
         textAlign: 'center',
-        fontfamily: 'Poppins',
+   fontfamily: Fontfamily.fontPrimary.fontFamily,
         color:'rgba(61, 61, 78, 1)',
-     
-        // fontSize: '12.5px',
-
-      
+  
         marginBottom: '16px',
     },
     enrollno: {
-        fontfamily: 'poppins sans-serif',
+        fontfamily: Fontfamily.fontPrimary.fontFamily,
         textAlign: 'center',
         fontSize: '14.5px',
         color: 'rgba(61, 61, 78, 1)',
@@ -48,7 +46,7 @@ const UserEyeDetailsTheme = (theme) => ({
 
     },
     gridcontainer: {
-        fontfamily: 'poppins sans-serif',
+        fontfamily: Fontfamily.fontPrimary.fontFamily   ,
         marginLeft: '5px'
     },
 

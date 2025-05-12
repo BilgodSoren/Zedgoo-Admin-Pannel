@@ -16,7 +16,15 @@ import UserAddNew from "./Views/UserManagement/UserAddNew";
 import HelpPage from "./Views/Universal/Help";
 import SettingsPage from "./Views/Universal/Setting";
 import StudentSignUp from "./Views/Student/SignIn/StudentSignUp";
+import Course from "./Views/Universal/NewSidebar";
+import UserAppBar from "./Views/UserManagement/UserAppBar";
 // import Signin from "./Views/Student/Signup/Signin";
+
+
+// import InputCompo from './Components/InputCompo';
+// import MainSignup from './Signup/MainSignup';
+// import Dashboard1 from "./Views/Student/Dashboards/DashBoard1";
+// import Dashboard2 from "./Views/Student/Dashboards/DashBoard2";
 
 function AppContent() {
   const location = useLocation();
@@ -43,6 +51,11 @@ function AppContent() {
         <Route path="/createprofile" element={<CreateProfile />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/help" element={<HelpPage />} />
+
+        {/* <Route index element={<MainSignup />} />
+        <Route path='/Dashboard1' element={<Dashboard1 />} />
+        <Route path='/dashboard2' element={<Dashboard2 />} />
+        <Route path='/final1' element={<Final />} /> */}
       </Routes>
     </>
   );

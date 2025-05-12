@@ -3,7 +3,7 @@ import Fontfamily from "../../Universal/fontfamilyTheme";
 const BatchManagementTheme = (theme) =>({
 
     mainbox : {
-        backgroundColor: 'rgba(42, 41, 39, 1)', fontFamily: '', width: '12%', display: 'flex', flexDirection: 'column' 
+        backgroundColor: 'rgba(42, 41, 39, 1)',   fontFamily:Fontfamily.fontPrimary.fontFamily, width: '12%', display: 'flex', flexDirection: 'column' 
     },
     appbar :{
         width: '88%', height: '6vh', backgroundColor: 'rgba(255, 255, 255, 1)'

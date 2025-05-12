@@ -1,3 +1,5 @@
+import Fontfamily from "../../Universal/fontfamilyTheme";
+
 const NothingToShowTheme = (theme) => ({
     container: {
       color: theme.palette.text.primary,
@@ -11,6 +13,7 @@ const NothingToShowTheme = (theme) => ({
       border: `0.4px solid ${theme.palette.divider}`,
       boxShadow: `0px 0px 1px ${theme.palette.grey[500]}`,
       backgroundColor: theme.palette.background.paper,
+      borderRadius: '5px',
       
     },
   
@@ -27,6 +30,7 @@ const NothingToShowTheme = (theme) => ({
       fontSize: '18px',
       fontWeight: 'bold',
       color: theme.palette.text.primary,
+      fontFamily: Fontfamily.fontPrimary.fontFamily,
     },
   });
   

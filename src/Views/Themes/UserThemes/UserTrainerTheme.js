@@ -1,4 +1,4 @@
-import '@fontsource/poppins'
+import Fontfamily from "../../Universal/fontfamilyTheme";
 
 const UserTrainerTheme = (theme) => ({
     box1: {
@@ -28,7 +28,7 @@ const UserTrainerTheme = (theme) => ({
 
     },
     celldata: {
-        fontWeight: 590, padding: '6px', align: "center", fontsize: '14px', fontFamily: "Poppins",
+        fontWeight: 590, padding: '6px', align: "center", fontsize: '14px', fontFamily: Fontfamily.fontPrimary.fontFamily,
         fontWeight: 400,
     },
     icon: {

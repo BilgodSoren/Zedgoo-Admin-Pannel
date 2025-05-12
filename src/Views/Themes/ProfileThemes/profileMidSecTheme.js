@@ -1,6 +1,8 @@
 import "@fontsource/comfortaa"
 import "@fontsource/poppins"
 
+import Fontfamily from "../../Universal/fontfamilyTheme";
+
 const ProfileMidSecTheme = (theme) => ({
     bestbox: {
         display: 'flex',
@@ -50,7 +52,7 @@ const ProfileMidSecTheme = (theme) => ({
         border:'1px solid rgba(82, 95, 225, 0.16)'
     },
     title:{
-        fontFamily:'Poppins'
+          fontFamily:Fontfamily.fontPrimary.fontFamily,
 
     },
 

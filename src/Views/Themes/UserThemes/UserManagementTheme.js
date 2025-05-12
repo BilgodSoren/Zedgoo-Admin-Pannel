@@ -8,10 +8,7 @@ const UserManagementTheme = (theme) => ({
 
   notificationIcon: {
     color: 'black',
-    width: '99%',
-    height: '99.5%',
-    position: 'relative',
-    left: '47%',
+    marginLeft: 'auto', // aligned to the right side
   },
 
   contentBox: {

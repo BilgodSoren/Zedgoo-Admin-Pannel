@@ -1,4 +1,5 @@
-import '@fontsource/poppins'
+// import '@fontsource/poppins'
+import Fontfamily from '../../Universal/fontfamilyTheme';
 
 const BatchDetails3Theme = (theme) => ({
   paper: {
@@ -26,19 +27,18 @@ const BatchDetails3Theme = (theme) => ({
   },
 
   text: {
-    //    fontfamily: 'poppins sans-serif',
-    fontfamily: 'poppins sans-serif',
+   fontFamily:Fontfamily.fontPrimary.fontFamily,
     color: 'rgba(61, 61, 78, 1)',
   },
   centerText: {
     textAlign: 'center',
-    fontfamily: 'poppins sans-serif',
+   fontFamily:Fontfamily.fontPrimary.fontFamily,
     fontWeight: 600,
     marginTop: theme.spacing(1),
   },
   batchInfo: {
     textAlign: 'center',
-    fontfamily: 'poppins sans-serif',
+   fontFamily:Fontfamily.fontPrimary.fontFamily,
     color: 'black',
   },
   statusBox: {
@@ -53,38 +53,36 @@ const BatchDetails3Theme = (theme) => ({
   tabs: {
     fontSize: '14px',
     fontWeight: 600,
-    //    fontfamily: 'poppins sans-serif',
-    fontfamily: 'poppins sans-serif',
+   fontFamily:Fontfamily.fontPrimary.fontFamily,
     color: 'rgba(0, 0, 0, 1)',
   },
   detailsBox: {
-    //    fontfamily: 'poppins sans-serif',
-    fontfamily: 'poppins sans-serif',
+   fontFamily:Fontfamily.fontPrimary.fontFamily,
     overflow: 'auto',
 
   },
   subtitle: {
-    fontfamily: 'poppins sans-serif',
+   fontFamily:Fontfamily.fontPrimary.fontFamily,
     fontSize: '13px',
     fontWeight: 600,
     color: 'black',
     marginTop: theme.spacing(3),
   },
   copyIcon: {
-    fontFamily: 'poppins',
+   fontFamily:Fontfamily.fontPrimary.fontFamily,
     marginLeft: theme.spacing(1),
   },
   urlBox: {
-    fontfamily: 'poppins sans-serif',
+   fontFamily:Fontfamily.fontPrimary.fontFamily,
     display: 'flex',
     alignItems: 'center',
   },
   bodyText: {
-    fontfamily: 'poppins sans-serif',
+   fontFamily:Fontfamily.fontPrimary.fontFamily,
     fontSize: '13px',
   },
   peoplebox: {
-    fontfamily: 'poppins sans-serif',
+   fontFamily:Fontfamily.fontPrimary.fontFamily,
     overflow: 'auto',
   }
 });

@@ -1,3 +1,6 @@
+import Fontfamily from "../../Universal/fontfamilyTheme";
+
+
 const ShowNothingTheme = (theme) => ({
 
     container: {
@@ -10,6 +13,8 @@ const ShowNothingTheme = (theme) => ({
         width: '100%',
         border: '0.4px solid whitesmoke',
         boxShadow: '0px 0px 1px grey',
+        fontFamily: Fontfamily.fontPrimary.fontFamily,
+        borderRadius:'5px'
     },
     content: {
         position: 'absolute',

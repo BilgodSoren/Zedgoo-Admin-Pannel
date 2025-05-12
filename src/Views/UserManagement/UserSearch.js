@@ -13,19 +13,25 @@ import {
 import { Search } from "@mui/icons-material";
 import EmptyDetails from "./UserAddNew";
 import UserSearchTheme from "../Themes/UserThemes/UserSearchTheme";
-
 import UserTrainerList from "./UserTrainerList";
-import UserStudentList from "./UserStudentList"; // Assuming this exists
+import UserStudentList from "./UserStudentList";
 import UserNothingtoShowFp from "./UserNothingFp";
 
 const UserSearch = () => {
   const theme = useTheme();
   const styles = UserSearchTheme(theme);
 
-  const [user, setUser] = useState(""); // No default selection
+  const [user, setUser] = useState("");
   const [session, setSession] = useState("");
   const [batch, setBatch] = useState("");
   const [showEmptyDetails, setShowEmptyDetails] = useState(false);
+  const [isGoClicked, setIsGoClicked] = useState(false); // NEW STATE
+
+  const handleGoClick = () => {
+    if (user) {
+      setIsGoClicked(true);
+    }
+  };
 
   return (
     <Box>
@@ -37,7 +43,10 @@ const UserSearch = () => {
             <Select
               sx={styles.select}
               value={user}
-              onChange={(e) => setUser(e.target.value)}
+              onChange={(e) => {
+                setUser(e.target.value);
+                setIsGoClicked(false); // Reset on change
+              }}
             >
               <MenuItem sx={styles.formControl} value="student">Student</MenuItem>
               <MenuItem sx={styles.formControl} value="trainer">Trainer</MenuItem>
@@ -70,10 +79,12 @@ const UserSearch = () => {
             </Select>
           </FormControl>
 
-          <Button sx={styles.goButton} variant="contained">
-
+          <Button
+            sx={styles.goButton}
+            variant="contained"
+            onClick={handleGoClick}
+          >
             {user ? "Go" : "Search"}
-
           </Button>
         </Box>
 
@@ -98,9 +109,13 @@ const UserSearch = () => {
       </Box>
 
       <Box sx={{ margin: "0px 15px 15px 15px", width: "68.5%" }}>
-        {user === "student" && <UserStudentList />}
-        {user === "trainer" && <UserTrainerList />}
-        {user === "" && <UserNothingtoShowFp />}
+        {isGoClicked ? (
+          user === "student"  ? <UserStudentList /> :
+          user === "trainer" ? <UserTrainerList /> :
+          <UserNothingtoShowFp />
+        ) : (
+          <UserNothingtoShowFp />
+        )}
       </Box>
 
       <Box sx={styles.empty}>
