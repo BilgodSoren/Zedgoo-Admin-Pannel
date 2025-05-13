@@ -18,13 +18,19 @@ import SettingsPage from "./Views/Universal/Setting";
 import StudentSignUp from "./Views/Student/SignIn/StudentSignUp";
 import Course from "./Views/Universal/NewSidebar";
 import UserAppBar from "./Views/UserManagement/UserAppBar";
-// import Signin from "./Views/Student/Signup/Signin";
 
 
-// import InputCompo from './Components/InputCompo';
-// import MainSignup from './Signup/MainSignup';
-// import Dashboard1 from "./Views/Student/Dashboards/DashBoard1";
-// import Dashboard2 from "./Views/Student/Dashboards/DashBoard2";
+
+// students routing 
+
+import Dashboard1 from "./Views/Student/Dashboards/DashBoard1";
+import Dashboard2 from "./Views/Student/Dashboards/DashBoard2";
+import Final from "./Views/Student/Finalpages/final1";
+import Landing from "./Views/Student/Signup/Landing";
+import Signin from "./Views/Student/Signup/Signin";
+
+import InputCompo from "./Views/Student/Components/InputCompo";
+import MainSignup from "./Views/Student/Signup/MainSignup";
 
 function AppContent() {
   const location = useLocation();
@@ -38,7 +44,7 @@ function AppContent() {
     <>
       {showNavigationLinks && <Sidebar />}
       <Routes>
-        <Route path="/" element={<Profile />} />
+        <Route path="/" element={<MainSignup />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/sidebar" element={<Sidebar />} />
         <Route path="/logout" element={<UserAddNew />} />
@@ -52,10 +58,15 @@ function AppContent() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/help" element={<HelpPage />} />
 
-        {/* <Route index element={<MainSignup />} />
-        <Route path='/Dashboard1' element={<Dashboard1 />} />
-        <Route path='/dashboard2' element={<Dashboard2 />} />
-        <Route path='/final1' element={<Final />} /> */}
+
+
+
+      {/* Students  */}
+
+        <Route index element = {<MainSignup/>}/>
+      <Route path='/Dashboard1' element={<Dashboard1/>}/>
+      <Route path='/dashboard2' element={<Dashboard2/>}/>
+      <Route path='/final1' element={<Final/>}/>
       </Routes>
     </>
   );
