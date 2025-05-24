@@ -11,11 +11,11 @@ import {
   useTheme
 } from "@mui/material";
 import { Search } from "@mui/icons-material";
-import EmptyDetails from "./UserAddNew";
-import UserSearchTheme from "../Themes/UserThemes/UserSearchTheme";
-import UserTrainerList from "./UserTrainerList";
-import UserStudentList from "./UserStudentList";
-import UserNothingtoShowFp from "./UserNothingFp";
+import EmptyDetails from "../UserAddNew";
+import UserSearchTheme from "../../Themes/UserThemes/UserSearchTheme";
+import UserTrainerList from "../UserTrainerList";
+import UserStudentList from "../UserStudentList";
+import UserNothingtoShowFp from "../UserNothingFp";
 
 const UserSearch = () => {
   const theme = useTheme();

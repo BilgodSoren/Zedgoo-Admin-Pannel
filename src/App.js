@@ -2,9 +2,10 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import Dashboard from "./Views/Universal/Dashboard";
-import UserManagement from "./Views/UserManagement/UserManagement";
+import UserManagement from "././Views/UserManagement/UserManagementMain";
 // import BatchManagement from "./Views/BatchManagement/BatchManagement"; // Fixed typo
-import BatchManagement from "./Views/BatchManagement/Batchmangement";
+// import BatchManagement from "././Views/BatchManagement/Batchmangement";
+import BatchManagement from "./Views/BatchManagement/BatchManagementMain";
 import Profile from "./Views/Profiles/Profile";
 import Sidebar from "./Views/Universal/Sidebar";
 // import SettingsPage from "./Views/Universal/SettingsPage"; // Ensure consistent naming
@@ -17,7 +18,7 @@ import HelpPage from "./Views/Universal/Help";
 import SettingsPage from "./Views/Universal/Setting";
 import StudentSignUp from "./Views/Student/SignIn/StudentSignUp";
 import Course from "./Views/Universal/NewSidebar";
-import UserAppBar from "./Views/UserManagement/UserAppBar";
+
 
 
 

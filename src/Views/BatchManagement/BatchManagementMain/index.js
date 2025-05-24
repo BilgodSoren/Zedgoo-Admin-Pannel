@@ -9,18 +9,18 @@ import { Box, Typography, AppBar, Button, Card, Slider } from '@mui/material';
 // import IconButton from '@mui/material';
 import { IconButton } from '@mui/material';
 
-import BatchSearch from './BatchSearch';
-import BatchDetails1 from './BatchDetails1';
-import BatchDetails2 from './BatchDetails2';
-import BatchDetails3 from './BatchDetails3';
-import BatchDetails4 from './BatchDetails4';
-import w from './w.jpg'
+import BatchSearch from '../BatchSearch';
+import BatchDetails1 from '../BatchDetails1';
+import BatchDetails2 from '../BatchDetails2';
+import BatchDetails3 from '../BatchDetails3';
+import BatchDetails4 from '../BatchDetails4';
+import w from '../w.jpg'
 import {useTheme} from '@mui/material';
-import BatchManagementTheme from '../Themes/BatchThemes/BatchManagementTheme';
-import BatchesList from './BatchesList';
+import BatchManagementTheme from '../../Themes/BatchThemes/BatchManagementTheme';
+import BatchesList from '../BatchesList';
 import {Avatar} from '@mui/material';
-import avatar from './avatar.jpg'
-import BatchNothingtoShowFp from './BatchNothingtoshowfp';
+import avatar from '../avatar.jpg'
+import BatchNothingtoShowFp from '../BatchNothingtoshowfp';
 
 
 

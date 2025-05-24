@@ -6,7 +6,8 @@ import {
   Box,
   TextField,
   IconButton,
-  InputAdornment
+  InputAdornment,
+  Typography
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 
@@ -15,68 +16,70 @@ export default function BatchDetails1({ onCancel, onSave }) {
   const styles = BatchDetails1Theme(theme);
 
   const handleSaveClick = () => {
-    // You can add your saving logic here if needed
     if (onSave) onSave();
   };
 
   return (
-    <Box sx={styles.container}>
+    <Box
+      sx={{
+        ...styles.container,
+        maxWidth: 350,
+        mx: 'auto',
+        p: 3,
+        borderRadius: 2,
+        boxShadow: 3,
+        backgroundColor: '#fff',
+      }}
+    >
       {/* Avatar Box */}
-      <Box style={{ textAlign: 'center', marginBottom: '20px' }}>
-        <Box sx={styles.avatarBox}>
-          <h1 style={styles.avatarText}>A</h1>
+      <Box sx={{ textAlign: 'center', mb: 3 }}>
+        <Box sx={{ ...styles.avatarBox, mx: 'auto' }}>
+          <Typography variant="h4" component="div" sx={styles.avatarText}>
+            A
+          </Typography>
         </Box>
       </Box>
 
       {/* Form Fields */}
-      <Box display="flex" flexDirection="column" alignItems="center" width="95%">
-        <TextField label="Batch Name" size="small" sx={styles.textField} />
-        <TextField label="Batch ID" size="small" sx={styles.textField} />
-        <TextField label="Subject" size="small" sx={styles.textField} />
-        <TextField label="Trainer" size="small" sx={styles.textField} />
+      <Box display="flex" flexDirection="column" alignItems="center" width="100%" gap={2}>
+        <TextField fullWidth label="Batch Name" size="small" />
+        <TextField fullWidth label="Batch ID" size="small" />
+        <TextField fullWidth label="Subject" size="small" />
+        <TextField fullWidth label="Trainer" size="small" />
 
-        {/* Trainer Fields with Close Buttons */}
-        <Box display="flex" flexDirection="column" justifyContent="center" alignItems="center" mt={2}>
-          <TextField
-            variant="outlined"
-            fullWidth
-            placeholder="T9155 : Name of trainer"
-            InputProps={{
-              style: styles.trainerField,
-              endAdornment: (
-                <InputAdornment position="end">
-                  <IconButton edge="end" size="large">
-                    <CloseIcon color="error" />
-                  </IconButton>
-                </InputAdornment>
-              ),
-            }}
-            sx={{ mb: 2 }}
-          />
-
-          <TextField
-            variant="outlined"
-            fullWidth
-            placeholder="T9155 : Name of trainer"
-            InputProps={{
-              style: styles.trainerField,
-              endAdornment: (
-                <InputAdornment position="end">
-                  <IconButton edge="end" size="large">
-                    <CloseIcon color="error" />
-                  </IconButton>
-                </InputAdornment>
-              ),
-            }}
-          />
+        {/* Trainer Fields */}
+        <Box width="100%" mt={1}>
+          {[1, 2].map((_, index) => (
+            <TextField
+              key={index}
+              fullWidth
+              size="small"
+              placeholder="T9155 : Name of trainer"
+              variant="outlined"
+              sx={{ mb: 1 }}
+              InputProps={{
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <IconButton edge="end" size="small">
+                      <CloseIcon color="error" fontSize="small" />
+                    </IconButton>
+                  </InputAdornment>
+                ),
+              }}
+            />
+          ))}
         </Box>
 
         {/* Buttons */}
-        <Box mt={2} display="flex" gap={2}>
-          <Button sx={styles.saveButton} variant="contained" onClick={handleSaveClick}>
+        <Box display="flex" justifyContent="flex-end" width="100%" mt={2}>
+          <Button
+            variant="contained"
+            size="small"
+            sx={{ minWidth: 80, px: 2 }}
+            onClick={handleSaveClick}
+          >
             Save
           </Button>
-         
         </Box>
       </Box>
     </Box>

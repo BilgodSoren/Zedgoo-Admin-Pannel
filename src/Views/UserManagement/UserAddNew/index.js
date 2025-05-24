@@ -4,7 +4,7 @@ import TextField from "@mui/material/TextField";
 import Avatar from "@mui/material/Avatar";
 import Chip from "@mui/material/Chip";
 
-import UserEmptyDetailsTheme from "../Themes/UserThemes/UserEmptyDetailsTheme";
+import UserEmptyDetailsTheme from "../../Themes/UserThemes/UserEmptyDetailsTheme";
 
 const StyledButton = styled(Button)(({ theme }) => ({
   margin: theme.spacing(1),

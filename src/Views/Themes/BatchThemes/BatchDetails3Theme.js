@@ -2,9 +2,21 @@
 import Fontfamily from '../../Universal/fontfamilyTheme';
 
 const BatchDetails3Theme = (theme) => ({
+  poppins:{
+    fontFamily: Fontfamily.fontPrimary.fontFamily,  
+    color:'rgba(0, 0, 0, 1)',
+    fontWeight: 400,
+    fontSize: '14px',
+  },
+    weightpoppins:{
+    fontFamily: Fontfamily.fontPrimary.fontFamily,  
+    color:'rgba(0, 0, 0, 1)',
+    fontWeight: 600,
+    
+  },
   paper: {
     padding: theme.spacing(2),
-    fontfamily: 'poppins sans-serif'
+   fontFamily: Fontfamily.fontPrimary.fontFamily,  
   },
   avatarBox: {
     display: 'flex',
@@ -82,8 +94,14 @@ const BatchDetails3Theme = (theme) => ({
     fontSize: '13px',
   },
   peoplebox: {
-   fontFamily:Fontfamily.fontPrimary.fontFamily,
-    overflow: 'auto',
+   fontFamily:Fontfamily.fontPrimary.fonctFamily,
+   overflow: 'auto',
+  },
+  addnewbtn:{
+    borderRadius: '5px',
+    backgroundColor:'rgba(42, 41, 39, 1)',
+    fontFamily:Fontfamily.fontPrimary.fontFamily,
+    fontWeight:400,
   }
 });
 

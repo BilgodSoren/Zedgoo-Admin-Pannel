@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Box, AppBar, IconButton, useTheme, Avatar } from "@mui/material";
 import { Notifications, Circle } from "@mui/icons-material";
-import UserSearch from "./UserSearch";
-import UserStudentList from "./UserStudentList";
-import UserManagementTheme from "../Themes/UserThemes/UserManagementTheme";
-import UserAppBar from "./UserAppBar";
+import UserSearch from "../UserSearch";
+// import UserStudentList from "../../UserStudentList";
+import UserStudentList from "../UserStudentList";
+import UserManagementTheme from "../../Themes/UserThemes/UserManagementTheme";
+import UserAppBar from "../UserAppbar";
 
 const UserManagement = () => {
   const theme = useTheme();

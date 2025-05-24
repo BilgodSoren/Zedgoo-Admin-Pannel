@@ -22,7 +22,7 @@ const Sidebar = () => {
 
    
     <Box sx={SidebarTheme.sidebarContainer}>
-      <Typography variant='h4' mt={1} color={'white'} sx={SidebarTheme.title}>Zedgoo</Typography>
+      <Typography variant='h4' mt={1} color={'white'} sx={SidebarTheme.title}>ZedGoo</Typography>
       <Typography mt={3} ml={3} color={'rgba(123, 123, 123, 1)'} sx={SidebarTheme.mainMenuText}>MAIN MENU</Typography>
 
       {/* Sidebar buttons */}

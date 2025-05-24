@@ -3,7 +3,7 @@ import React from "react";
 import { AppBar, Toolbar, IconButton, Avatar, Box } from "@mui/material";
 import { Notifications } from "@mui/icons-material";
 import { useTheme } from "@mui/material/styles";
-import UserManagementTheme from "../Themes/UserThemes/UserManagementTheme";
+import UserManagementTheme from "../../Themes/UserThemes/UserManagementTheme";
 
 const UserAppBar = () => {
   const theme = useTheme();

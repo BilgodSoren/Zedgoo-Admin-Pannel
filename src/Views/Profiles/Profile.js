@@ -10,7 +10,7 @@ import deskleft from './deskleft.png';
 import deskright from './deskright.png';
 import desk from './desk.png';
 import ProfileFooter from './profilefooter';
-import ProfileMidSection from '../Profiles/profilemidsection';
+import ProfileMidSection from './profilemidsection';
 import SuperAdminSignIn from '../Universal/SuperAdminSignIn';
 
 const Profile = () => {

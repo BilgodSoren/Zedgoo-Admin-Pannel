@@ -2,7 +2,7 @@ const BatchDetails1Theme = (theme) => ({
   container: {
     position: "absolute",
       right: "5px",
-      top: "140px",
+      top: "130px",
       height: "68.5vh",
       width: "29%",
       display: "flex",

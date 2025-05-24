@@ -4,7 +4,7 @@ import '@fontsource/inter'
 
 const Fontfamily = {
   fontPrimary: {
-    fontFamily: 'Poppins, sans-serif',
+    fontFamily: 'poppins, sans-serif',
   },
   fontSecondary: {
     fontFamily: 'Comfortaa, sans-serif',

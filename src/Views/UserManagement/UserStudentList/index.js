@@ -10,16 +10,16 @@ import Avatar from '@mui/material/Avatar';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import { Box, Typography, useTheme, ButtonBase } from '@mui/material';
 
-import q from './q.jpg';
-import p from './p.png';
+import q from '../q.jpg';
+import p from '../p.png';
 
-import UserEyeDetails from './UserEyesDetails';
-import UserNothingtoShowFp from './UserNothingFp';
-import UserEmptyDetails from './UserAddNew';
+import UserEyeDetails from '../UserEyeDetails';
+import UserNothingtoShowFp from '../UserNothingFp';
+import UserEmptyDetails from '../UserAddNew';
 
-import UserEmptyDetailsTheme from '../Themes/UserThemes/UserEmptyDetailsTheme';
-import UserEyeDetailsTheme from '../Themes/UserThemes/UserEyeDetailsTheme';
-import UserStudentListTheme from '../Themes/UserThemes/UserStudentListTheme';
+import UserEmptyDetailsTheme from '../../Themes/UserThemes/UserEmptyDetailsTheme';
+import UserEyeDetailsTheme from '../../Themes/UserThemes/UserEyeDetailsTheme';
+import UserStudentListTheme from '../../Themes/UserThemes/UserStudentListTheme';
 
 const students = [
   {

@@ -12,24 +12,24 @@ import { Box } from '@mui/material';
 import { NavLink } from 'react-router-dom';
 
 // import q from './ViewsComponent/q.jpg';
-import p from './p.png'
-import BatchEyeDetails from '../BatchManagement/BatchEyeDetails';
-import BatchNothingtoShowFp from '../BatchManagement/BatchNothingtoshowfp';
-import BatchDetails4 from '../BatchManagement/BatchDetails4';
-import BatchDetails3 from '../BatchManagement/BatchDetails3';
-import BatchEmptyDetails from '../BatchManagement/BatchEmptyDetails';
-import BatchDetails2 from '../BatchManagement/BatchDetails2';
+import p from '../p.png'
+import BatchEyeDetails from '../../BatchManagement/BatchEyeDetails';
+import BatchNothingtoShowFp from '../../BatchManagement/BatchNothingtoshowfp';
+import BatchDetails4 from '../../BatchManagement/BatchDetails4';
+import BatchDetails3 from '../../BatchManagement/BatchDetails3';
+import BatchEmptyDetails from '../../BatchManagement/BatchEmptyDetails';
+import BatchDetails2 from '../../BatchManagement/BatchDetails2';
 
-import BatchDetails1 from '../BatchManagement/BatchDetails1';
-import BatchDetails5 from '../BatchManagement/BatchDetails5';
-import BatchPeople from '../BatchManagement/BatchPeople';
+import BatchDetails1 from '../../BatchManagement/BatchDetails1';
+import BatchDetails5 from '../../BatchManagement/BatchDetails5';
+import BatchPeople from '../../BatchManagement/BatchPeople';
 import {useTheme,Typography} from '@mui/material';
 import {ButtonBase} from '@mui/material';
 
-import BatchStudentTheme from '../Themes/BatchThemes/BatchesTheme';
-import BatchTrainerTheme from '../Themes/UserThemes/UserTrainerTheme';
-import w from './w.jpg';
-import UserNothingtoShowFp from './UserNothingFp';
+import BatchStudentTheme from '../../Themes/BatchThemes/BatchesTheme';
+import BatchTrainerTheme from '../../Themes/UserThemes/UserTrainerTheme';
+import w from '../w.jpg';
+import UserNothingtoShowFp from '../UserNothingFp';
 const students = [
  {
      profile: <Avatar alt="Travis Howard" src={p}  sx={{ width: 32, height: 32,marginLeft:'20px' }} />,
