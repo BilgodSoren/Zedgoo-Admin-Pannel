@@ -6,9 +6,9 @@ import { Typography } from '@mui/material';
 import { Search } from '@mui/icons-material';
 import { useState } from 'react';
 import { useTheme } from '@mui/material';
-import BatchSearchTheme from '../Themes/BatchThemes/BatchSearchTheme';
+import BatchSearchTheme from '../../Themes/BatchThemes/BatchSearchTheme';
 
-import BatchDetails1 from './BatchDetails1';
+import BatchDetails1 from '../BatchDetails1';
 
 const BatchSearch = () => {
   const theme = useTheme();

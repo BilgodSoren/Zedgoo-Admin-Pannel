@@ -16,9 +16,9 @@ import { MoreVert, Edit } from "@mui/icons-material";
 import { useTheme } from "@mui/material";
 import { Menu, MenuItem } from "@mui/material";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import BatchPeopleTheme from "../Themes/BatchThemes/BatchPeopleTheme";
-import BatchAddStudent from "./BatchAddStudent";
-import BatchAddTrainer from "./BatchAddTrainer";
+import BatchPeopleTheme from "../../Themes/BatchThemes/BatchPeopleTheme";
+import BatchAddStudent from "../BatchAddStudent";
+import BatchAddTrainer from "../BatchAddTrainer";
 
 const BatchPeople = () => {
   const theme = useTheme();

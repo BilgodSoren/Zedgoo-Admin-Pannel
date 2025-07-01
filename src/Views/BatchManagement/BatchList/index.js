@@ -6,16 +6,16 @@ import {
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import { NavLink } from 'react-router-dom';
 
-import BatchEyeDetails from './BatchEyeDetails';
-import BatchPeople from './BatchPeople';
+import BatchEyeDetails from '../BatchEyeDetails';
+import BatchPeople from '../BatchPeople';
 import { useTheme } from '@mui/material';
-import BatchesTheme from '../Themes/BatchThemes/BatchesTheme';
-import BatchNothingtoShowFp from './BatchNothingtoshowfp';
-import BatchDetails3 from './BatchDetails3';
-import BatchDetails4 from './BatchDetails4';
-import BatchDetails1 from './BatchDetails1';
-import BatchDetails2 from './BatchDetails2';
-import BatchDetails5 from './BatchDetails5';
+import BatchesTheme from '../../Themes/BatchThemes/BatchesTheme';
+import BatchNothingtoShowFp from '../BatchNothingToShow';
+import BatchDetails3 from '../BatchDetails3';
+import BatchDetails4 from '../BatchDetails4';
+import BatchDetails1 from '../BatchDetails1';
+import BatchDetails2 from '../BatchDetails2';
+import BatchDetails5 from '../BatchDetails5';
 
 
 // Sample student data

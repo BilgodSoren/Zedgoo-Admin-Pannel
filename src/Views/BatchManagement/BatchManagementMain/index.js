@@ -17,10 +17,10 @@ import BatchDetails4 from '../BatchDetails4';
 import w from '../w.jpg'
 import {useTheme} from '@mui/material';
 import BatchManagementTheme from '../../Themes/BatchThemes/BatchManagementTheme';
-import BatchesList from '../BatchesList';
+import BatchesList from '../BatchList';
 import {Avatar} from '@mui/material';
 import avatar from '../avatar.jpg'
-import BatchNothingtoShowFp from '../BatchNothingtoshowfp';
+import BatchNothingtoShowFp from '../BatchNothingToShow';
 
 
 

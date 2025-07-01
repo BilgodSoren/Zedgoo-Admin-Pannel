@@ -6,6 +6,7 @@ import UserManagement from "././Views/UserManagement/UserManagementMain";
 // import BatchManagement from "./Views/BatchManagement/BatchManagement"; // Fixed typo
 // import BatchManagement from "././Views/BatchManagement/Batchmangement";
 import BatchManagement from "./Views/BatchManagement/BatchManagementMain";
+// import Profile from "././Views/Profiles/Profile";
 import Profile from "./Views/Profiles/Profile";
 import Sidebar from "./Views/Universal/Sidebar";
 // import SettingsPage from "./Views/Universal/SettingsPage"; // Ensure consistent naming
@@ -17,12 +18,7 @@ import UserAddNew from "./Views/UserManagement/UserAddNew";
 import HelpPage from "./Views/Universal/Help";
 import SettingsPage from "./Views/Universal/Setting";
 import StudentSignUp from "./Views/Student/SignIn/StudentSignUp";
-import Course from "./Views/Universal/NewSidebar";
-
-
-
-
-// students routing 
+// import Course from "./Views/Universal/NewSidebar";
 
 import Dashboard1 from "./Views/Student/Dashboards/DashBoard1";
 import Dashboard2 from "./Views/Student/Dashboards/DashBoard2";
@@ -32,6 +28,7 @@ import Signin from "./Views/Student/Signup/Signin";
 
 import InputCompo from "./Views/Student/Components/InputCompo";
 import MainSignup from "./Views/Student/Signup/MainSignup";
+import ZedgooHeader from "./Views/Profiles/ProfileHeader";
 
 function AppContent() {
   const location = useLocation();
@@ -58,6 +55,7 @@ function AppContent() {
         <Route path="/createprofile" element={<CreateProfile />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/help" element={<HelpPage />} />
+        <Route path="/SignUpStudent" element={<StudentSignUp />} />
 
 
 

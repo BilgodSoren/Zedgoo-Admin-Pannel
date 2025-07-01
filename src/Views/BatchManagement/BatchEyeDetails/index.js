@@ -5,8 +5,8 @@ import Typography from '@mui/material/Typography';
 import EditIcon from '@mui/icons-material/Edit';
 import { Box } from '@mui/material';
 import { useTheme } from '@mui/material';
-import q from './w.jpg'; // Replace with the correct path to your image file
-import BatchEyeDetailsTheme from '../Themes/BatchThemes/BatchEyeDetailsTheme';
+import q from '../w.jpg'; // Replace with the correct path to your image file
+import BatchEyeDetailsTheme from '../../Themes/BatchThemes/BatchEyeDetailsTheme';
 
 export default function BatchEyeDetails() {
   const theme = useTheme();

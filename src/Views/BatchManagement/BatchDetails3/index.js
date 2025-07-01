@@ -23,9 +23,11 @@ import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import ArrowDropDown from '@mui/icons-material/ArrowDropDown';
 import { useTheme } from '@mui/material/styles';
-import BatchDetails3Theme from '../Themes/BatchThemes/BatchDetails3Theme';
-import BatchAddTrainer from './BatchAddTrainer'; // ✅ make sure the path is correct
-import BatchAddStudent from './BatchAddStudent';
+
+import BatchDetails3Theme from '../../Themes/BatchThemes/BatchDetails3Theme';
+import BatchAddTrainer from '../BatchAddTrainer';
+import BatchAddStudent from '../BatchAddStudent';
+import BatchEmptyDetails from '../BatchEmptyDetails'; // ✅ make sure the path is correct
 
 function BatchDetails3() {
   const theme = useTheme();
@@ -34,11 +36,9 @@ function BatchDetails3() {
   const [tabValue, setTabValue] = React.useState(0);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [isPaused, setIsPaused] = React.useState(true);
-
-
-  const [showTrainerPopup, setShowTrainerPopup] = React.useState(false); // ✅ state to toggle popup
+  const [showTrainerPopup, setShowTrainerPopup] = React.useState(false);
   const [showStudentPopup, setShowStudentPopup] = React.useState(false);
-
+  const [showEditPopup, setShowEditPopup] = React.useState(false); // ✅ edit popup
 
   const handleStatusToggle = () => {
     setIsPaused(!isPaused);
@@ -70,6 +70,7 @@ function BatchDetails3() {
 
   return (
     <>
+      {/* Student Add Popup */}
       {showStudentPopup && (
         <Box
           sx={{
@@ -84,7 +85,7 @@ function BatchDetails3() {
             justifyContent: 'center',
             zIndex: 1300,
           }}
-          onClick={() => setShowStudentPopup(false)} // close when clicking outside
+          onClick={() => setShowStudentPopup(false)}
         >
           <Box onClick={(e) => e.stopPropagation()}>
             <BatchAddStudent onClose={() => setShowStudentPopup(false)} />
@@ -95,7 +96,7 @@ function BatchDetails3() {
       <Paper sx={{ ...styles.paper, borderRadius: '12px', padding: '24px', overflow: 'auto', boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)', border: '1px solid #e0e0e0' }}>
         <Box sx={{ position: 'relative', textAlign: 'center' }}>
           <Avatar sx={styles.avatar}>A</Avatar>
-          <IconButton sx={styles.editIcon} aria-label="edit">
+          <IconButton sx={styles.editIcon} aria-label="edit" onClick={() => setShowEditPopup(true)}>
             <EditIcon />
           </IconButton>
         </Box>
@@ -197,14 +198,9 @@ function BatchDetails3() {
 
             {/* Student Section */}
             <Box>
-              <Box display="flex" justifyContent="space-between" alignItems="center" mb={1} overflow={'auto'}>
+              <Box display="flex" justifyContent="space-between" alignItems="center" mb={1}>
                 <Typography fontSize={'20px'} fontWeight="bold" sx={styles.weightpoppins}>Student</Typography>
-                <Button
-                  variant="contained"
-                  size="small"
-                  sx={styles.addnewbtn}
-                  onClick={() => setShowStudentPopup(true)} // ✅ open popup
-                >
+                <Button variant="contained" size="small" sx={styles.addnewbtn} onClick={() => setShowStudentPopup(true)}>
                   + Add New
                 </Button>
               </Box>
@@ -216,13 +212,7 @@ function BatchDetails3() {
 
               <Stack spacing={1} sx={{ maxHeight: '70px', overflowY: 'auto' }}>
                 {studentList.map((student, index) => (
-                  <Box
-                    key={index}
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="space-between"
-                    px={1}
-                  >
+                  <Box key={index} display="flex" alignItems="center" justifyContent="space-between" px={1}>
                     <Box display="flex" alignItems="center">
                       <Checkbox sx={{ mr: 1 }} />
                       <Avatar src={student.avatar} sx={{ width: 32, height: 30, mr: 1 }} />
@@ -239,7 +229,7 @@ function BatchDetails3() {
         )}
       </Paper>
 
-      {/* ✅ Overlay Popup for Add Trainer */}
+      {/* Trainer Popup */}
       {showTrainerPopup && (
         <Box
           sx={{
@@ -258,6 +248,29 @@ function BatchDetails3() {
         >
           <Box onClick={(e) => e.stopPropagation()}>
             <BatchAddTrainer onclose={() => setShowTrainerPopup(false)} />
+          </Box>
+        </Box>
+      )}
+
+      {/* Edit Popup */}
+      {showEditPopup && (
+        <Box
+          sx={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100vw',
+            height: '100vh',
+            backgroundColor: 'rgba(0, 0, 0, 0.4)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 1300,
+          }}
+          onClick={() => setShowEditPopup(false)}
+        >
+          <Box onClick={(e) => e.stopPropagation()}>
+            <BatchEmptyDetails />
           </Box>
         </Box>
       )}

@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Box, Typography } from '@mui/material';
 import { useTheme } from '@mui/material';
     
-import NothingToShowTheme from '../Themes/BatchThemes/NothingToSHowTheme';
+import NothingToShowTheme from '../../Themes/BatchThemes/NothingToSHowTheme';
 
 export default function BatchNothingtoShowFp() {
   const theme = useTheme();

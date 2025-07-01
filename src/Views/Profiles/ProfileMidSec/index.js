@@ -9,13 +9,13 @@ import CardActions from '@mui/material/CardActions';
 import Collapse from '@mui/material/Collapse';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import desk from './desk.png'
-import e from './e.jpg'
-import w from './w.jpg'
+import desk from '../desk.png'
+import e from '../e.jpg'
+import w from '../w.jpg'
 import { orange } from '@mui/material/colors';
 import { hover } from '@testing-library/user-event/dist/hover';
 import { useTheme } from '@emotion/react';
-import ProfileMidSecTheme from '../Themes/ProfileThemes/profileMidSecTheme';
+import ProfileMidSecTheme from '../../Themes/ProfileThemes/profileMidSecTheme';
 
 
 

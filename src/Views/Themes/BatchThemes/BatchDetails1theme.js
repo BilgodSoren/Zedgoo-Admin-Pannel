@@ -14,6 +14,7 @@ const BatchDetails1Theme = (theme) => ({
       backdropFilter: "blur(15px)",
       zIndex: 1200,
       backgroundColor: theme.palette.background.paper,
+
       // padding: theme.spacing(2),
    
   },

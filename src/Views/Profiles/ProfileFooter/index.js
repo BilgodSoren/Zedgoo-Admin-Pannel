@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Box, Button, IconButton, TextField, Typography } from '@mui/material';
 import { Facebook, Twitter, Instagram, YouTube, GitHub } from '@mui/icons-material';
 import { useTheme } from '@emotion/react';
-import ProfileFooterTheme from '../Themes/ProfileThemes/ProfileFooterTheme';
+import ProfileFooterTheme from '../../Themes/ProfileThemes/ProfileFooterTheme';
 
 const ProfileFooter = () => {
     const theme = useTheme();

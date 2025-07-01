@@ -8,13 +8,14 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Avatar from '@mui/material/Avatar';
 import VisibilityIcon from '@mui/icons-material/Visibility';
+
 import { Box } from '@mui/material';
 import { NavLink } from 'react-router-dom';
 
 // import q from './ViewsComponent/q.jpg';
 import p from '../p.png'
 import BatchEyeDetails from '../../BatchManagement/BatchEyeDetails';
-import BatchNothingtoShowFp from '../../BatchManagement/BatchNothingtoshowfp';
+import BatchNothingtoShowFp from '../../BatchManagement/BatchNothingToShow';
 import BatchDetails4 from '../../BatchManagement/BatchDetails4';
 import BatchDetails3 from '../../BatchManagement/BatchDetails3';
 import BatchEmptyDetails from '../../BatchManagement/BatchEmptyDetails';

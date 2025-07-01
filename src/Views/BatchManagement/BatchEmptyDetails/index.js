@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Box, TextField, Avatar, Chip } from "@mui/material";
 import { useTheme } from '@mui/material';
-import BatchEmptyDetailsTheme from "../Themes/BatchThemes/BatchEmptyDetailsTheme";
+import BatchEmptyDetailsTheme from '../../Themes/BatchThemes/BatchEmptyDetailsTheme';
 
 const BatchEmptyDetails = () => {
   const theme = useTheme();
